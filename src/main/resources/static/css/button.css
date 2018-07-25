@@ -1,0 +1,10 @@
+button{padding: .3em .5em;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3em;
+    text-align: center;
+    color:black;
+    }
+    button:active{  box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+    border-color: rgba(0,0,0,.8);
+    background: #bbb;
+    }

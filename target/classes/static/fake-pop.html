@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>弹窗</title>
+	
+	</head>
+
+	<body>
+		<link rel="stylesheet" href="css/login_pop.css" />
+		<button onClick="loginBgDiv.style.display='';loginBox.style.display='';">登录</button>
+		<div id="loginBgDiv" style="display:none;"></div>
+		<div id="loginBox" style="display: none; position:relative;z-index:1;">
+			<div class="title" id="Mdown">
+				<button class="close"  onClick="loginBox.style.display='none';loginBgDiv.style.display='none'">X</button>
+			</div>
+			<div class="login" id="logindiv" style="display: block;">
+				<form method="post" action="" name="loginForm" >
+					<span class="t1" >欢迎来到豆小荐，请登录</span>
+					<p></p>
+					<input class="input" type="text" name="username" size="20"  placeholder="用户名"><br />
+					<p></p>
+					<input class="input" type="text" name="password" size="12"  placeholder="密码"><br />
+					<p></p>
+				</form><!--document.loginForm.submit()-->
+					<button class="submitButton" onclick="alert('登录')">登录</button>
+					<p></p>
+					<button class="registrationButton" onclick="logindiv.style.display='none';registrationdiv.style.display='block'">注册</button>
+			</div>
+			<div class="login" id="registrationdiv" style="display: none;">
+				<form method="post" action="" name="registrationtForm">
+					<span class="t1" >欢迎来到豆小荐，请注册</span>
+					<p></p>
+					<input class="input" type="text" name="username"  placeholder="用户名"><br />
+					<input class="input" type="text" name="telephone" placeholder="电话"><br />
+					<input class="input" type="text" name="password"  placeholder="密码"><br />
+					<input class="input" type="text" name="hobby"  placeholder="感兴趣的电影类别"><p />
+				</form>
+					<button class="submitButton" onclick="logindiv.style.display='block';registrationdiv.style.display='none'">返回登录</button>
+					<button class="registrationButton" onclick="alert('注册')">注册</button>
+				
+			</div>
+		</div>
+	</body>
+</html>

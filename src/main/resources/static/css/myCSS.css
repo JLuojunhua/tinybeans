@@ -1,0 +1,94 @@
+body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px} 
+/* 个人中心 登录 和注册 */
+#db-global-nav {
+	font: 20px Helvetica, Arial, sans-serif;
+	line-height: 1.62;
+	font-size: 20px;
+}
+#db-global-nav {
+	height: 30px;
+	color: #d5d5d5;
+	background-color: lightskyblue;
+	min-width: 950px;
+}
+#db-global-nav a:link,
+#db-global-nav a:visited,
+#db-global-nav a:hover,
+#db-global-nav a:active {
+	color: #000000;
+	text-decoration:none;
+	margin-right: 20px;
+}
+#db-global-nav .top-nav-info {
+	float: right;
+	margin: 0 12px 0 0;
+	line-height: 28px;
+}
+
+/* 马 和 搜索 和 分页*/
+
+#db-nav-movie {
+  position: relative;
+  background-color: aliceblue; }
+#db-nav-movie a:link, #db-nav-movie a:visited {
+    color: #27a;
+    text-decoration: none; }
+  #db-nav-movie a:active, #db-nav-movie a:hover {
+    background-color: #27a;
+    color: #fff; }
+nav-search {
+  margin-left: 145px;
+  overflow: visible !important;
+  position: relative;
+  zoom: 1;
+  padding: 10px 0 15px 0; }
+  .nav-search fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: static; }
+  .nav-search legend {
+  .nav-search label {
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    line-height: 30px;
+    cursor: text;
+    color: #bbb;
+    width: auto; }
+  .nav-search .inp {
+    float: left;
+    width: 470px;
+    height: 34px;
+    text-align: center;
+    margin-right: -3px;
+    cursor: text; }
+    .nav-search .inp input {
+      background: #fff;
+      width: 96%;
+      margin: 0;
+      text-align: left;
+      height: 30px;
+      padding-left: 10px;
+      height: 28px\9;
+      line-height: 28px\9;
+      outline: none; }
+  .nav-search input {
+    -webkit-appearance: none;
+    border: none;
+    background: transparent; }
+  .nav-search .inp-btn {
+    position: relative;
+    left: -1px;
+    width: 37px;
+    height: 34px;
+    zoom: 1;
+    overflow: hidden; }
+    .nav-search .inp-btn input {
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      padding: 35px 0 0 0;
+      overflow: hidden;
+      color: transparent;
+      cursor: pointer; }

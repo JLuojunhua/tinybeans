@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.MovieMapper" >
+    <!--映射-->
+    <resultMap type="entity.Movie" id="MovieResult">
+        <id column = "id" property = "id"/>
+        <result column = "movieName" property = "movieName"/>
+        <result column = "commentNum" property = "commentNum"/>
+        <result column = "director" property = "director"/>
+        <result column = "scriptwriter" property = "scriptwriter"/>
+        <result column = "mainactor" property = "mainactor"/>
+        <result column = "produceCountry" property = "produceCountry"/>
+        <result column = "language" property = "language"/>
+        <result column = "date" property = "date"/>
+        <result column = "year" property = "year"/>
+        <result column = "movieDuration" property = "movieDuration"/>
+        <result column = "score" property = "score"/>
+        <result column = "scorePopulation" property = "scorePopulation"/>
+        <result column = "icon" property = "icon"/>
+        <result column = "oneStar" property = "oneStar"/>
+        <result column = "twoStar" property = "twoStar"/>
+        <result column = "threeStar" property = "threeStar"/>
+        <result column = "fourStar" property = "fourStar"/>
+        <result column = "fiveStar" property = "fiveStar"/>
+    </resultMap>
+
+    <!--接口实现-->
+    <insert id="add" parameterType="Movie">
+        insert into movie
+        (id,commentNum,director,scriptwriter,
+        mainactor,produceCountry,language,date,year,movieDuration,
+        score,scorePopulation,icon,oneStar,
+        twoStar,threeStar,fourStar,fiveStar)
+        value (#{id}, #{commentNum}, #{director}, #{scriptwriter},
+        #{mainactor}, #{produceCountry}, #{language}, #{date},
+        #{year}, #{movieDuration},#{score}, #{scorePopulation},
+        #{icon}, #{oneStar}, #{twoStar}, #{threeStar},
+        #{fourStar}, #{fiveStar})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE FROM movie WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="Score">
+        update movie set
+        commentNum = #{commentNum},
+        director = #{director},
+        scriptwriter = #{scriptWriter},
+        mainactor = #{mainactor},
+        produceCountry = #{produceCountry},
+        language = #{language},
+        date = #{date},
+        year = #{date},
+        movieDuration = #{movieDuration},
+        score = #{score},
+        scorePopulation = #{scorePopulation},
+        icon = #{icon},
+        oneStar = #{oneStar},
+        twoStar = #{twoStar},
+        threeStar = #{threeStar},
+        fourStar = #{fourStar},
+        fiveStar = #{fiveStar}
+        where id = #{id};
+    </update>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="Movie">
+        SELECT * FROM movie where id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="MovieResult">
+        select * from movie
+    </select>
+
+    <select id="findByMovieName" resultMap="MovieResult">
+        select * from movie where movie_name = #{movieName}
+    </select>
+
+    <select id="findByDirector" resultMap="MovieResult">
+        select * from movie where director = #{director}
+    </select>
+
+    <select id="findByMainactor" resultMap="MovieResult">
+        select * from movie where director = #{director}
+    </select>
+
+    <select id="findByClassification" resultMap="MovieResult">
+        select * from movie where classification like '%#{classification}%'
+    </select>
+
+    <select id="findByDate" resultMap="MovieResult">
+        select * from movie where date = #{date}
+    </select>
+    
+    <select id="sortMovieByHot" resultMap="MovieResult">
+        select * FROM movie ORDER BY comment_num DESC
+    </select>
+
+    <select id="sortMovieByScore" resultMap="MovieResult">
+        select * FROM movie ORDER BY
+        select score in score where movie_id = #{movieId} DESC
+    </select>
+
+    <select id="sortMovieByTime" resultMap="MovieResult">
+        select * FROM movie ORDER BY year DESC
+    </select>
+</mapper>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="always">
+		<title> 豆小荐 </title>
+
+		<link href="css/myCSS.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link href="css/douban.css" rel="stylesheet" type="text/css">
+		<link href="css/_all.css" rel="stylesheet" type="text/css">
+		<link href="css/init.css" rel="stylesheet">
+		<script type="text/javascript">
+			var _head_start = new Date();
+		</script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/douban.js"></script>
+		<script type="text/javascript" src="js/_all.js"></script>
+
+		<link rel="stylesheet" href="css/home.css" />
+
+		<script type='text/javascript'>
+			var _vwo_code = (function() {
+				var account_id = 249272,
+					settings_tolerance = 0,
+					library_tolerance = 2500,
+					use_existing_jquery = false,
+					// DO NOT EDIT BELOW THIS LINE
+					f = false,
+					d = document;
+				return {
+					use_existing_jquery: function() {
+						return use_existing_jquery;
+					},
+					library_tolerance: function() {
+						return library_tolerance;
+					},
+					finish: function() {
+						if(!f) {
+							f = true;
+							var a = d.getElementById('_vis_opt_path_hides');
+							if(a) a.parentNode.removeChild(a);
+						}
+					},
+					finished: function() {
+						return f;
+					},
+					load: function(a) {
+						var b = d.createElement('script');
+						b.src = a;
+						b.type = 'text/javascript';
+						b.innerText;
+						b.onerror = function() {
+							_vwo_code.finish();
+						};
+						d.getElementsByTagName('head')[0].appendChild(b);
+					},
+					init: function() {
+						settings_timer = setTimeout('_vwo_code.finish()', settings_tolerance);
+						var a = d.createElement('style'),
+							b = 'body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',
+							h = d.getElementsByTagName('head')[0];
+						a.setAttribute('id', '_vis_opt_path_hides');
+						a.setAttribute('type', 'text/css');
+						if(a.styleSheet) a.styleSheet.cssText = b;
+						else a.appendChild(d.createTextNode(b));
+						h.appendChild(a);
+						this.load('//dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&r=' + Math.random());
+						return settings_timer;
+					}
+				};
+			}());
+
+			+
+			function() {
+				var bindEvent = function(el, type, handler) {
+					var $ = window.jQuery || window.Zepto || window.$
+					if($ && $.fn && $.fn.on) {
+						$(el).on(type, handler)
+					} else if($ && $.fn && $.fn.bind) {
+						$(el).bind(type, handler)
+					} else if(el.addEventListener) {
+						el.addEventListener(type, handler, false);
+					} else if(el.attachEvent) {
+						el.attachEvent("on" + type, handler);
+					} else {
+						el["on" + type] = handler;
+					}
+				}
+
+				var _origin_load = _vwo_code.load
+				_vwo_code.load = function() {
+					var args = [].slice.call(arguments)
+					bindEvent(window, 'load', function() {
+						_origin_load.apply(_vwo_code, args)
+					})
+				}
+			}()
+
+			_vwo_settings_timer = _vwo_code.init();
+		</script>
+
+		<style type="text/css"></style>
+		<style type="text/css">
+			img {
+				max-width: 100%;
+			}
+		</style>
+		<script type="text/javascript"></script>
+		<link rel="stylesheet" href="css/unknown.css">
+		<link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+		<body>
+
+		<script type="text/javascript">
+			var _body_start = new Date();
+		</script>
+
+		<link href="css/body_bundle.css" rel="stylesheet" type="text/css">
+
+		<div id="db-global-nav" class="global-nav"">
+			<div class="bd">
+
+				<div class="top-nav-info">
+					<a href="index.html" id="logout" style="display: block; float: right;">退出登录</a>
+					<a href="#" id="login" style="display: block; float: right;" onClick="loginBgDiv.style.display='';loginBox.style.display='';logindiv.style.display='block';registrationdiv.style.display='none';">登录</a>
+					<a href="#" id="nav-register" rel="nofollow" style="display: block; float: right;" 
+						onClick="loginBgDiv.style.display='';loginBox.style.display='';logindiv.style.display='none';registrationdiv.style.display='block';">注册</a>
+					<a href="manage-del-commit.html" id="manage" style="display: block; float: right;">管理</a>
+					<a href="user-homepage.html" id="homepage" style="display: block; float: right;">个人中心</a>
+				<script>
+					var user=2;
+					if (user==0){
+						document.getElementById("manage").style.display="none";
+						document.getElementById("homepage").style.display="none";
+						}
+					else if(user==1){document.getElementById("manage").style.display="none";}
+				</script>
+					
+				</div>
+
+			</div>
+		</div>
+
+		<div id="db-nav-movie" class="nav">
+			<div class="nav-wrap">
+				<div class="nav-primary">
+					<div class="">
+												<a href="index.html">
+						<img src="img/horse.jpg" style="float: left;"/></a>
+					</div>
+					<div class="nav-search">
+						<form action="" method="get">
+							<fieldset>
+								<legend>搜索：</legend>
+								<label for="inp-query">
+        					</label>
+								<div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影" value=""></div>
+								<div class="inp-btn"><input type="button" value="搜索" id="searchBtn"></div>
+							<script>
+								$("#searchBtn").click(function(){
+      							var searchText= jQuery.trim($("#inp-query").val());
+       							var searchUrl =encodeURI("search.html?searchText="+searchText);   //使用encodeURI编码
+      							window.location.href =searchUrl;
+   								})
+							</script>
+							
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="nav-secondary">
+
+				<div class="nav-items" style="float: left;">
+					<ul>
+						<li>
+							<a href="choose.html">选电影</a>
+						</li>
+						<li>
+							<a href="billboard.html">排行榜</a>
+						</li>
+						<li>
+							<a href="tag.html">分类</a>
+						</li>
+						<li>
+							<a href="user-collection.html">个人收藏</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--弹窗-->
+		<link href="css/body_bundle.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/login_pop.css" />
+		<div id="loginBgDiv" style="display:none;position: absolute"></div>
+		<div id="loginBox" style="display: none;position:absolute;">
+			<div class="title" id="Mdown">
+				<button class="close"  onClick="loginBox.style.display='none';loginBgDiv.style.display='none'">X</button>
+			</div>
+			<div class="login" id="logindiv" style="display: block;">
+				<form method="post" action="" name="loginForm" >
+					<span class="t1" >欢迎来到豆小荐，请登录</span>
+					<p></p>
+					<input class="input" type="text" name="username" size="20"  placeholder="用户名"><br />
+					<p></p>
+					<input class="input" type="text" name="password" size="12"  placeholder="密码"><br />
+					<p></p>
+				</form><!--document.loginForm.submit()-->
+					<button class="submitButton" onclick="alert('登录')">登录</button>
+					<p></p>
+					<button class="registrationButton" onclick="logindiv.style.display='none';registrationdiv.style.display='block'">注册</button>
+			</div>
+			<div class="login" id="registrationdiv" style="display: none;">
+				<form method="post" action="" name="registrationtForm">
+					<span class="t1" >欢迎来到豆小荐，请注册</span>
+					<p></p>
+					<input class="input" type="text" name="username"  placeholder="用户名"><br />
+					<input class="input" type="text" name="telephone" placeholder="电话"><br />
+					<input class="input" type="text" name="password"  placeholder="密码"><br />
+					<input class="input" type="text" name="hobby"  placeholder="感兴趣的电影类别"><p />
+				</form>
+					<button class="submitButton" onclick="logindiv.style.display='block';registrationdiv.style.display='none'">返回登录</button>
+					<button class="registrationButton" onclick="alert('注册')">注册</button>
+			</div>
+		</div>
+		<!--弹窗-->
+		<!-- 模板 -->
+		
+    <style type="text/css">
+  
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/59f798f5b75e51f0.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+
+
+
+
+
+    <script src="js/shire-bundle.js" defer="defer"></script>
+    <link href="css/bundle.css" rel="stylesheet" type="text/css">
+    <script src="js/movie-bundle.js" defer="defer"></script>
+
+
+    
+    <div id="wrapper" style="text-align:left">
+    <div id="content">
+    <div id="dale_movie_subject_top_icon"></div>
+    <h1>
+        <span property="v:itemreviewed">我不是药神</span>
+            <span class="year">(2018)</span>
+    </h1>
+
+        <div class="grid-16-8 clearfix">
+ 
+            <div class="article">
+
+        <div class="indent clearfix">
+            <div class="subjectwrap clearfix" xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Movie">
+                <div class="subject clearfix">
+                    
+
+
+
+<div id="mainpic" class="">
+    <a class="nbgnbg" href="" title="点击看更多海报">
+        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2510081688.jpg" title="点击看更多海报" alt="我不是药神" rel="v:image" />
+   </a>
+</div>
+
+<div id="info">
+        <span ><span class='pl'>导演</span>: <span class='attrs'>文牧野</span></span><br/>
+        <span ><span class='pl'>编剧</span>: <span class='attrs'>韩家女 / 钟伟 / 文牧野</span></span><br/>
+        <span class="actor">
+        	<span class='pl'>主演</span>: 
+        	<span class='attrs'>
+        		徐峥 / 王传君  / 周一围 / 谭卓 / 章宇 / 杨新鸣 / 王佳佳 / 王砚辉 / 贾晨飞 / 龚蓓苾 / 宁浩 / 李乃文 / 岳小军 / 苇青 / 富冠铭 / 巴拉特·巴蒂 / 喜利图 / 张海艳 / 朱耕佑</span></span><br/>
+        <span class="pl">类型:</span> <span property="v:genre">剧情</span> / <span property="v:genre">喜剧</span><br/>
+        <span class="pl">制片国家/地区:</span> 中国大陆<br/>
+        <span class="pl">语言:</span> 汉语普通话 / 英语 / 上海话 / 印地语<br/>
+        <span class="pl">上映日期:</span> <span property="v:initialReleaseDate" content="2018-07-05(中国大陆)">2018-07-05(中国大陆)</span> / <span property="v:initialReleaseDate" content="2018-06-30(大规模点映)">2018-06-30(大规模点映)</span><br/>
+        <span class="pl">片长:</span> <span property="v:runtime" content="117">117分钟</span><br/>
+        <span class="pl">又名:</span> 中国药神 / 印度药神 / 印度药商 / 生命之路 / Dying to Survive / Drug Dealer<br/>
+		</div>
+               </div>
+
+<div id="interest_sectl">
+    <div class="rating_wrap clearbox" rel="v:rating">
+        <div class="clearfix">
+          <div class="rating_logo ll">
+              评分
+          </div>
+        </div>
+        
+
+
+<div class="rating_self clearfix" typeof="v:Rating">
+    <strong class="ll rating_num" property="v:average">8.9</strong>
+    <span property="v:best" content="10.0"></span>
+    <div class="rating_right ">
+        <div class="ll bigstar bigstar45"></div>
+        <div class="rating_sum">
+        </div>
+    </div>
+</div>
+<div class="ratings-on-weight">
+    
+        <div class="item">
+        
+        <span class="stars5 starstop" title="力荐">
+            5星
+        </span>
+        <div class="power" style="width:64px"></div>
+        <span class="rating_per">54.5%</span>
+        <br />
+        </div>
+        <div class="item">
+        
+        <span class="stars4 starstop" title="推荐">
+            4星
+        </span>
+        <div class="power" style="width:43px"></div>
+        <span class="rating_per">37.4%</span>
+        <br />
+        </div>
+        <div class="item">
+        
+        <span class="stars3 starstop" title="还行">
+            3星
+        </span>
+        <div class="power" style="width:8px"></div>
+        <span class="rating_per">7.3%</span>
+        <br />
+        </div>
+        <div class="item">
+        
+        <span class="stars2 starstop" title="较差">
+            2星
+        </span>
+        <div class="power" style="width:0px"></div>
+        <span class="rating_per">0.5%</span>
+        <br />
+        </div>
+        <div class="item">
+        
+        <span class="stars1 starstop" title="很差">
+            1星
+        </span>
+        <div class="power" style="width:0px"></div>
+        <span class="rating_per">0.2%</span>
+        <br />
+        </div>
+</div>
+
+    </div>
+
+
+
+                
+            </div>
+                
+
+
+
+
+<div id="interest_sect_level" class="clearfix">
+        
+        <div class="ll j a_stars">
+            
+    
+    评价:
+    <span id="rating"> <span id="stars" 
+    	data-solid="https://img3.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" 
+    	data-hollow="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" 
+    	data-solid-2x="https://img3.doubanio.com/f/shire/7258904022439076d57303c3b06ad195bf1dc41a/pics/rating_icons/star_onmouseover@2x.png" 
+    	data-hollow-2x="https://img3.doubanio.com/f/shire/95cc2fa733221bb8edd28ad56a7145a5ad33383e/pics/rating_icons/star_hollow_hover@2x.png">
+
+            <a href="" class="j a_show_login" name="pbtn-1">
+        <img src="img/star_hollow_hover.png" id="star1" width="16" height="16"/></a>
+            <a href="" class="j a_show_login" name="pbtn-2">
+        <img src="img/star_hollow_hover.png" id="star2" width="16" height="16"/></a>
+            <a href="" class="j a_show_login" name="pbtn-3">
+        <img src="img/star_hollow_hover.png" id="star3" width="16" height="16"/></a>
+            <a href="" class="j a_show_login" name="pbtn-4">
+        <img src="img/star_hollow_hover.png" id="star4" width="16" height="16"/></a>
+            <a href="" class="j a_show_login" name="pbtn-5">
+        <img src="img/star_hollow_hover.png" id="star5" width="16" height="16"/></a>
+    </span><span id="rateword" class="pl"></span>
+    <input id="n_rating" type="hidden" value=""  />
+    </span>
+
+        </div>
+    
+
+</div>
+
+
+
+
+<div class="gtleft">
+
+    <script type="text/javascript">
+        $(function(){
+            $(".ul_subject_menu li.rec .bn-sharing").bind("click", function(){
+                $.get("/blank?sbj_page_click=bn_sharing");
+            });
+            $(".ul_subject_menu .create_from_menu").bind("click", function(e){
+                e.preventDefault();
+                var $el = $(this);
+                var glRoot = document.getElementById('gallery-topics-selection');
+                if (window.has_gallery_topics && glRoot) {
+                    // 判断是否有话题
+                    glRoot.style.display = 'block';
+                } else {
+                    location.href = $el.attr('href');
+                }
+            });
+        });
+    </script>
+</div>
+
+
+<div class="rec-sec">
+<span class="rec">
+    <script id="movie-share" type="text/x-html-snippet">
+        
+    <form class="movie-share" action="/j/share" method="POST">
+        <div class="clearfix form-bd">
+            <div class="input-area">
+                <textarea name="text" class="share-text" cols="72" data-mention-api="https://api.douban.com/shuo/in/complete?alt=xd&amp;callback=?"></textarea>
+                <input type="hidden" name="target-id" value="26752088">
+                <input type="hidden" name="target-type" value="0">
+                <input type="hidden" name="title" value="我不是药神‎ (2018)">
+                <input type="hidden" name="desc" value="导演 文牧野 主演 徐峥 / 王传君 / 中国大陆 / 8.9分(555221评价)">
+                <input type="hidden" name="redir" value=""/>
+                <div class="mentioned-highlighter"></div>
+            </div>
+
+            <div class="info-area">
+                    <img class="media" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" />
+                <strong>我不是药神‎ (2018)</strong>
+                <p>导演 文牧野 主演 徐峥 / 王传君 / 中国大陆 / 8.9分(555221评价)</p>
+                <p class="error server-error">&nbsp;</p>
+            </div>
+        </div>
+        <div class="form-ft">
+            <div class="form-ft-inner">
+                
+
+
+
+                <span class="avail-num-indicator">140</span>
+                <span class="bn-flat">
+                    <input type="submit" value="推荐" />
+                </span>
+            </div>
+        </div>
+    </form>
+    
+    <div id="suggest-mention-tmpl" style="display:none;">
+        <ul>
+            {{#users}}
+            <li id="{{uid}}">
+              <img src="{{avatar}}">{{{username}}}&nbsp;<span>({{{uid}}})</span>
+            </li>
+            {{/users}}
+        </ul>
+    </div>
+
+
+    </script>
+
+        
+        
+</span>
+
+
+</div>
+
+
+
+
+        </div>
+            
+
+
+    <div id="collect_form_26752088"></div>
+
+
+        
+
+
+
+<div class="related-info" style="margin-bottom:-10px;">
+    <a name="intro"></a>
+    
+        
+            
+            
+    <h2>
+        <i class="">我不是药神的剧情简介</i>
+              · · · · · ·
+    </h2>
+
+            <div class="indent" id="link-report">
+                    
+                        <span property="v:summary" class="">
+                                　　普通中年男子程勇（徐峥 饰）经营着一家保健品店，失意又失婚。不速之客吕受益（王传君 饰）的到来，让他开辟了一条去印度买药做“代购”的新事业，虽然困难重重，但他在这条“买药之路”上发现了商机，一发不可收拾地做起了治疗慢粒白血病的印度仿制药独家代理商。赚钱的同时，他也认识了几个病患及家属，为救女儿被迫做舞女的思慧（谭卓 饰）、说一口流利“神父腔”英语的刘牧师（杨新鸣 饰），以及脾气暴烈的“黄毛”（章宇 饰），几个人合伙做起了生意，利润倍增的同时也危机四伏。程勇昔日的小舅子曹警官（周一围 饰）奉命调查仿制药的源头，假药贩子张长林（王砚辉 饰）和瑞士正牌医药代表（李乃文 饰）也对其虎视眈眈，生意逐渐变成了一场关于救赎的拉锯战。
+                                    <br />
+                                　　本片改编自慢粒白血病患者陆勇代购抗癌药的真实事迹。
+                        </span>
+            </div>
+</div>
+
+
+
+<div id="celebrities" class="celebrities related-celebrities">
+
+
+
+<script type="text/javascript">
+    var answerObj = {
+      ISALL: 'False',
+      TYPE: 'movie',
+      SUBJECT_ID: '26752088',
+      USER_ID: 'None'
+    }
+</script>
+
+<style type="text/css">
+.award li { display: inline; margin-right: 5px }
+.awards { margin-bottom: 20px }
+.awards h2 { background: none; color: #000; font-size: 14px; padding-bottom: 5px; margin-bottom: 8px; border-bottom: 1px dashed #dddddd }
+.awards .year { color: #666666; margin-left: -5px }
+.mod { margin-bottom: 25px }
+.mod .hd { margin-bottom: 10px }
+.mod .hd h2 {margin:24px 0 3px 0}
+</style>
+
+
+
+<script type="text/x-handlebar-tmpl" id="comment-tmpl">
+    <div class="dummy-fold">
+        {{#each comments}}
+        <div class="comment-item" data-cid="id">
+            <div class="comment">
+                <h3>
+                    <span class="comment-vote">
+                            <span class="votes">{{votes}}</span>
+                        <input value="{{id}}" type="hidden"/>
+                        <a href="javascript:;" class="j {{#if ../if_logined}}a_vote_comment{{else}}a_show_login{{/if}}">有用</a>
+                    </span>
+                    <span class="comment-info">
+                        <a href="{{user.path}}" class="">{{user.name}}</a>
+                        {{#if rating}}
+                        <span class="allstar{{rating}}0 rating" title="{{rating_word}}"></span>
+                        {{/if}}
+                        <span>
+                            {{time}}
+                        </span>
+                        <p> {{content_tmpl content}} </p>
+                    </span>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+
+    <div id="comments-section">
+        <div class="mod-hd">
+        <link rel="stylesheet" href="css/button.css" />
+    <button id="review" style="float: right;display: block;" onclick="review()">我要写短评</button>
+    <button id="reviewSubmit"  style="float: right;display: none;" onclick="reviewSubmit()">评价</button>
+    <button id="reviewCancel" style="float: right;display: none" onclick="reviewCancel()">取消</button>
+    <h2>
+        <i class="">我不是药神的短评</i>
+              · · · · · ·
+            <span class="pl">
+            (共 220238 条)
+            </span>
+    </h2>
+    <textarea id="reviewText"  placeholder="最多256个字" style="width: 100%;height: 100px;font-family: '微软雅黑';font-size: large;display: none;"></textarea>
+    </div>
+        <script>
+        	//WCWCWWC
+    	function review(){
+    		document.getElementById("review").style.display="none";
+    		document.getElementById("reviewSubmit").style.display="block";
+    		document.getElementById("reviewCancel").style.display="block";
+    		document.getElementById("reviewText").style.display="block";
+    	};
+    	function reviewSubmit(){
+    		alert("提交");
+    		window.location.reload()
+    	};
+    	function reviewCancel(){
+    		document.getElementById("review").style.display="block";
+    		document.getElementById("reviewSubmit").style.display="none";
+    		document.getElementById("reviewCancel").style.display="none";
+    		document.getElementById("reviewText").style.display="none";
+    	}
+    </script>
+    <div class="mod-bd">
+    <div class="tab-bd">
+        <div id="hot-comments" class="tab">
+            
+    
+        
+        <div class="comment-item" data-cid="1355656634">
+            
+    
+    <div class="comment">
+        <h3>
+            <span class="comment-info">
+                <a href="" class="">徐若风</a>
+                    <span class="allstar40 rating" title="推荐"></span>
+                <span class="comment-time " title="2018-06-06 15:57:09">
+                    2018-06-06
+                </span>
+                <a id="jb" class="comment_btn j a_show_login" style="display: block;font-size: x-small;" onclick="report()">举报</a>
+                <a id="yjb" class="comment_btn j a_show_login" style="display: none;font-size: x-small;" onclick="afterReport()">已举报</a>
+                <script>
+                	function report(){
+                		$("#jb")[0].style.display="none";
+                		$("#yjb")[0].style.display="block";
+                	};
+                	function afterReport(){
+                		$("#jb")[0].style.display="block";
+                		$("#yjb")[0].style.display="none";
+                	}				
+                </script>
+               
+            </span>
+        </h3>
+        <p class=""> 
+            
+                <span class="short">放豆瓣语境下，是部时至今日终于拍出来的国产“高分韩国电影”——拿现实题材拍商业类型片，社会性意义摆在那，群戏也处理得相当不错。对我们国家而言，这样的电影多一部是一部，走一步是一步。</span>
+        </p>
+    </div>
+
+        </div>
+        
+        <div class="comment-item" data-cid="1392087857">
+            
+    
+    <div class="comment">
+        <h3>
+            <span class="comment-info">
+                <a href="" class="">桃桃淘电影</a>
+                    <span class="allstar40 rating" title="推荐"></span>
+                <span class="comment-time " title="2018-06-19 18:03:55">
+                    2018-06-19
+                </span>
+            </span>
+        </h3>
+        <p class=""> 
+            
+                <span class="short">最大的病，其实是穷病。真的被感动了，整体都很成熟，也有些许韩片的影子。几个演员表演都非常出色。可看性和内在的表达都不错。这个世界最荒诞在于，越贴近真实，真实越荒诞。人这一生，太不易了。最后，王传君，加油哦！</span>
+        </p>
+    </div>
+
+        </div>
+        
+        <div class="comment-item" data-cid="1367727380">
+            
+    
+    <div class="comment">
+        <h3>
+            <span class="comment-info">
+                <a href="" class="">Noodles</a>
+                     
+                    <span class="allstar50 rating" title="力荐"></span>
+                <span class="comment-time " title="2018-07-03 23:58:30">
+                    2018-07-03
+                </span>
+            </span>
+        </h3>
+        <p class=""> 
+            
+                <span class="short">人生建议：别买零食，吃不下的。</span>
+        </p>
+    </div>
+
+        </div>
+        
+        <div class="comment-item" data-cid="1400326458">
+            
+    
+    <div class="comment">
+        <h3>
+            <span class="comment-info">
+                <a href="" class="">大島</a>
+                     
+                    <span class="allstar50 rating" title="力荐"></span>
+                <span class="comment-time " title="2018-07-05 21:39:15">
+                    2018-07-05
+                </span>
+            </span>
+        </h3>
+        <p class=""> 
+            
+                <span class="short">你的一个举动可能会改变别人的一生，酒吧领班从此爱上了钢管舞。</span>
+        </p>
+    </div>
+
+        </div>
+        
+        <div class="comment-item" data-cid="1368629874">
+
+    <div class="comment">
+        <h3>
+            <span class="comment-info">
+                <a href="" class="">给你好看</a>
+                     
+                    <span class="allstar50 rating" title="力荐"></span>
+                <span class="comment-time " title="2018-07-04 10:58:44">
+                    2018-07-04
+                </span>
+            </span>
+        </h3>
+        <p class=""> 
+                <span class="short">为一句“谁家还没个病人”泪流满面 感叹生命在“穷病”面前无药可救 感慨中国终于有了属于我们自己的有力量的电影 所有演员都非常出色 近年最好的群像表演 请记住这些电影人 宁浩 文牧野 徐峥 周一围 王传君 谭卓 章宇 杨新铭 王砚辉 咱们电影还是有希望的 愿中国的电影越来越好 谢谢</span>
+        </p>
+    </div>
+        </div>
+        &gt; <a href="comments?sort=new_score&status=P" >更多</a>
+        </div>
+        
+        
+    </div>
+
+	
+   
+    </div>
+    
+    </div>
+
+
+    <br/>
+	
+    </div>
+    
+   
+    
+    </div>
+    
+    </div>
+    <div class="aside">
+	<div id="recommendations" class="">
+        <div class="tags">
+
+        <h2 style="font-family: '微软雅黑';">喜欢这部电影的人也喜欢</h2>
+   			<div class="recommendations-bd">
+        <dl class="">
+            <dt>
+                <a href="" >
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2510081688.jpg" alt="三块广告牌" class="" />
+                </a>
+            </dt>
+            <dd>
+                <a href="" class="" >三块广告牌</a>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a href="" >
+                    <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2393044761.jpg" alt="驴得水" class="" />
+                </a>
+            </dt>
+            <dd>
+                <a href="" class="" >驴得水</a>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a href="" >
+                    <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2522331945.jpg" alt="完美陌生人" class="" />
+                </a>
+            </dt>
+            <dd>
+                <a href="" class="" >完美陌生人</a>
+            </dd>
+        </dl>
+		<dl class="">
+            <dt>
+                <a href="" >
+                    <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2275298525.jpg" alt="心迷宫" class="" />
+                </a>
+            </dt>
+            <dd>
+                <a href="" class="" >心迷宫</a>
+            </dd>
+        </dl>
+    		</div>
+		</div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+

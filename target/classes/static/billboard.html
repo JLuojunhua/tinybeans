@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="always">
+		<title> 豆小荐 </title>
+
+		<link href="css/myCSS.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link href="css/douban.css" rel="stylesheet" type="text/css">
+		<link href="css/_all.css" rel="stylesheet" type="text/css">
+		<link href="css/init.css" rel="stylesheet">
+		<script type="text/javascript">
+			var _head_start = new Date();
+		</script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/douban.js"></script>
+		<script type="text/javascript" src="js/_all.js"></script>
+
+		<link rel="stylesheet" href="css/home.css" />
+<style type="text/css"></style>
+		<style type="text/css">
+			img {
+				max-width: 100%;
+			}
+		</style>
+		<script type="text/javascript"></script>
+		<link rel="stylesheet" href="css/unknown.css">
+		<link rel="shortcut icon" src="img/horse.jpg" type="image/x-icon">
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			var _body_start = new Date();
+		</script>
+
+		<link href="css/body_bundle.css" rel="stylesheet" type="text/css">
+
+		<div id="db-global-nav" class="global-nav"">
+			<div class="bd">
+
+				<div class="top-nav-info">
+					<a href="index.html" id="logout" style="display: block; float: right;">退出登录</a>
+					<a href="#" id="login" style="display: block; float: right;" onClick="loginBgDiv.style.display='';loginBox.style.display='';logindiv.style.display='block';registrationdiv.style.display='none';">登录</a>
+					<a href="#" id="nav-register" rel="nofollow" style="display: block; float: right;" 
+						onClick="loginBgDiv.style.display='';loginBox.style.display='';logindiv.style.display='none';registrationdiv.style.display='block';">注册</a>
+					<a href="manage-del-commit.html" id="manage" style="display: block; float: right;">管理</a>
+					<a href="user-homepage.html" id="homepage" style="display: block; float: right;">个人中心</a>
+				<script>
+					var user=2;
+					if (user==0){
+						document.getElementById("manage").style.display="none";
+						document.getElementById("homepage").style.display="none";
+						}
+					else if(user==1){document.getElementById("manage").style.display="none";}
+				</script>
+					
+				</div>
+
+			</div>
+		</div>
+
+
+		<script src="js/bundle.js" defer="defer"></script>
+
+		<link href="css/bundle.css" rel="stylesheet" type="text/css">
+
+		<div id="db-nav-movie" class="nav">
+			<div class="nav-wrap">
+				<div class="nav-primary">
+					<div class="">
+						<a href="index.html">
+						<img src="img/horse.jpg" style="float: left;"/></a>
+					</div>
+					<div class="nav-search">
+						<form action="" method="get">
+							<fieldset>
+								<legend>搜索：</legend>
+								<label for="inp-query">
+        					</label>
+								<div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影" value=""></div>
+								<div class="inp-btn"><input type="button" value="搜索" id="searchBtn"></div>
+							<script>
+								$("#searchBtn").click(function(){
+      							var searchText= jQuery.trim($("#inp-query").val());
+       							var searchUrl =encodeURI("search.html?searchText="+searchText);   //使用encodeURI编码
+      							window.location.href =searchUrl;
+   								})
+							</script>
+							
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="nav-secondary">
+
+				<div class="nav-items" style="float: left;">
+					<ul>
+						<li>
+							<a href="choose.html">选电影</a>
+						</li>
+						<li>
+							<a href="billboard.html">排行榜</a>
+						</li>
+						<li>
+							<a href="tag.html">分类</a>
+						</li>
+						<li>
+							<a href="user-collection.html">个人收藏</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+					<!--弹窗-->
+		<link href="css/body_bundle.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/login_pop.css" />
+<!--		<button >登录</button>	-->	
+		<div id="loginBgDiv" style="display:none;position: absolute"></div>
+		<div id="loginBox" style="display: none;position:absolute;">
+			<div class="title" id="Mdown">
+				<button class="close"  onClick="loginBox.style.display='none';loginBgDiv.style.display='none'">X</button>
+			</div>
+			<div class="login" id="logindiv" style="display: block;">
+				<form method="post" action="" name="loginForm" >
+					<span class="t1" >欢迎来到豆小荐，请登录</span>
+					<p></p>
+					<input class="input" type="text" name="username" size="20"  placeholder="用户名"><br />
+					<p></p>
+					<input class="input" type="text" name="password" size="12"  placeholder="密码"><br />
+					<p></p>
+				</form><!--document.loginForm.submit()-->
+					<button class="submitButton" onclick="alert('登录')">登录</button>
+					<p></p>
+					<button class="registrationButton" onclick="logindiv.style.display='none';registrationdiv.style.display='block'">注册</button>
+			</div>
+			<div class="login" id="registrationdiv" style="display: none;">
+				<form method="post" action="" name="registrationtForm">
+					<span class="t1" >欢迎来到豆小荐，请注册</span>
+					<p></p>
+					<input class="input" type="text" name="username"  placeholder="用户名"><br />
+					<input class="input" type="text" name="telephone" placeholder="电话"><br />
+					<input class="input" type="text" name="password"  placeholder="密码"><br />
+					<input class="input" type="text" name="hobby"  placeholder="感兴趣的电影类别"><p />
+				</form>
+					<button class="submitButton" onclick="logindiv.style.display='block';registrationdiv.style.display='none'">返回登录</button>
+					<button class="registrationButton" onclick="alert('注册')">注册</button>
+				
+			</div>
+		</div>
+		<!--弹窗-->
+		<!-- 模板 -->
+		<div id="wrapper" style="text-align: left;">
+			<div id="content">
+					<h1 id="billboardTag">排行榜</h1>
+
+					<div class="grid-16-8 clearfix">
+
+						<div class="article">
+									<a href="?type=按热度" data-type="movie">按热度</a> /
+									<a href="?type=按评分">按评分</a> /
+									<a href="?type=按时间">按时间</a>
+						<script>
+							var billboardText = "排行榜";
+							var billboardUrl =window.location.href;
+					        var billboardData =billboardUrl.split("=");        //截取 url中的“=”,获得“=”后面的参数
+					        if(billboardData.length!=1){
+					        	billboardText =decodeURI(billboardData[1]);//decodeURI解码
+					        	$("#billboardTag")[0].innerHTML=billboardText;
+					        }
+						</script>
+		<p class="ul first"></p>
+		<table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                    <a class="nbg" href=""  title="燃烧">
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2520095279.webp" width="75" alt="燃烧" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                <div class="pl2">
+                    <a href=""  class="">
+                        燃烧
+                        / <span style="font-size:13px;">燃烧烈爱(台) / Burning</span>
+                    </a>
+                    <p class="pl">2018-05-16(戛纳电影节) / 2018-05-17(韩国) / 刘亚仁 / 史蒂文·元 / 全钟瑞 / 金秀京 / 崔承浩 / 玉子妍 / 韩国 / 李沧东 / 148分钟 / 燃烧 / 剧情 / 悬疑 / 李沧东 Chang-dong Lee / Jungmi Oh / 村上春树 Haruki Murakami / 韩语</p>
+     
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">7.9</span>
+                                <span class="pl">(67407人评价)</span>
+                        </div>
+                </div>
+            </td>
+        </tr>
+    	</table>
+    	<p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href=""  title="爱你，西蒙">
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2523592367.webp" width="75" alt="爱你，西蒙" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href=""  class="">
+                        爱你，西蒙
+                        / <span style="font-size:13px;">亲爱的初恋(台) / 抱抱我的初恋(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2018-03-16(美国) / 尼克·罗宾森 / 詹妮弗·加纳 / 乔什·杜哈明 / 小豪尔赫·兰登伯格 / 凯瑟琳·兰福德 / 亚历山德拉·希普 / 洛根·米勒 / 凯南·朗斯代尔 / 特丽莎·贝特曼 / 托尼·海尔 / 娜塔莎·罗斯韦尔 / 迈尔斯·赫尔泽 / 乔伊·保罗瑞...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">8.3</span>
+                                <span class="pl">(53177人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+							<div class="list-wp">
+								<div class="list"></div>
+							</div>
+
+							<script type="text/tmpl" id="tag-tmpl">
+								<label>
+            <%= _.escape(val)%>
+            <input type="radio" name="<%= type%>" value="<%= _.escape(val)%>">
+            <% if (custom) { %>
+                <a href="javascript:;" class="remove">x</a>
+            <% } %>
+        </label>
+							</script>
+
+							<script type="text/tmpl" id="subject-tmpl">
+								<% if (playable) { %>
+								<a class="item" target="_blank" href="<%= url%>?tag=<%= tag%>&from=gaia_video">
+									<% } else {%>
+									<a class="item" target="_blank" href="<%= url%>?tag=<%= tag%>&from=gaia">
+										<% } %>
+										<div class="cover-wp" data-isnew="<%= is_new%>" data-id="<%= id%>">
+											<img src="<%= cover%>" alt="<%= title%>" data-x="<%= cover_x%>" data-y="<%= cover_y%>" />
+										</div>
+										<p>
+											<% if (is_new) { %>
+											<span class="green">
+                        <img src="https://img3.doubanio.com/f/movie/caa8f80abecee1fc6f9d31924cef8dd9a24c7227/pics/movie/ic_new.png" width="16" class="new" />
+                    </span>
+											<% } %>
+
+											<%= title%>
+
+											<% if (rate !== '') { %>
+											<strong><%= rate%></strong>
+											<% } else {%>
+											<span>暂无评分</span>
+											<% } %>
+										</p>
+									</a>
+							</script>
+
+							<script type="text/tmpl" id="subject-info-tmpl">
+								<div class="wp">
+									<div class="info">
+										<% if (playable) { %>
+										<h3><a target="_blank" href="<%= url%>?tag=<%= tag%>&from=gaia_video"><%= title%></a></h3>
+										<% } else { %>
+										<h3><a target="_blank" href="<%= url%>?tag=<%= tag%>&from=gaia"><%= title%></a></h3>
+										<% } %>
+										<p class="rank">
+											<% if (rate !== '') { %>
+											<span class="ll bigstar<%= star%>"></span>&nbsp;&nbsp;
+											<strong><%= rate%></strong>
+											<% } else { %> 暂无评分
+											<% } %>
+										</p>
+										<p class="meta">
+											<% if (playable) { %>
+											<span class="green">可播放</span>
+											<% } %>
+											<% if (playable && is_new) { %>
+											<span class="green">新出片源</span>
+											<% } else if (is_new) { %>
+											<span class="green">本周新片</span>
+											<% } %>
+											<% if (duration) { %>
+											<span><%= duration%></span>
+											<% } %>
+											<% if (episodes_count) { %>
+											<span><%= episodes_count%>集</span>
+											<% } %>
+											<% if (region) { %>
+											<span><%= region%></span>
+											<% } %>
+											<% if (types) { %>
+											<% _.each (types.slice(0,3), function(type){ %>
+											<span><%= type%></span>
+											<% }) %>
+											<% } %>
+											<% if (directors.length) { %>
+											<span><%= directors[0]%>(导演)</span>
+											<% } %>
+											<% if (actors) { %>
+											<% _.each (actors.slice(0,3), function(actor){ %>
+											<span><%= actor%></span>
+											<% }) %>
+											<% } %>
+										</p>
+										<p class="collect-area">
+											<% if (collection_status === 'F') { %>
+											<% if (is_tv) { %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-do">在看</a>
+											<% } %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-collect">看过</a>
+											<span>已想看</span>
+											<% } else if (is_tv && collection_status === 'N') { %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-collect">看过</a>
+											<span>已在看</span>
+											<% } else if (collection_status === 'P') { %>
+											<span>已看过</span>
+											<% } else { %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-wish">想看</a>
+											<% if (is_tv) { %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-do">在看</a>
+											<% } %>
+											<a href="javascript:;" rel="nofollow" class="j a_collect_btn" name="sbtn-<%= id%>-collect">看过</a>
+											<% } %>
+										</p>
+									</div>
+									<% if (short_comment.content) {%>
+									<p class="comment">
+										<%= short_comment.content%>
+										<span>- <%= short_comment.author%>的短评</span>
+									</p>
+									<% } %>
+								</div>
+							</script>
+
+							<script type="text/tmpl" id="gaia-slide-tmpl">
+								<div class="slider">
+									<div class="slide-container" style="height: <%= slideHeight %>px;">
+										<div class="slide-wrapper" style="width: <%= slideWidth * (pageCount + 2) %>px;">
+											<div class="slide-page" style="width: <%= slideWidth %>px;" data-index="<%= pageCount - 1%>"></div>
+											<% for (var i = 0; i < pageCount; i++) { %>
+											<div class="slide-page" style="width: <%= slideWidth %>px;" data-index="<%= i %>"></div>
+											<% } %>
+											<div class="slide-page" style="width: <%= slideWidth %>px;" data-index="0"></div>
+										</div>
+									</div>
+									<div class="slide-ctrl ui-slide-control">
+										<a class="btn-prev" href="javascript:void(0)"></a>
+										<% for (var i = 0; i < pageCount; i++) { %>
+										<i class="dot <%= i === 0 ? 'activate' : '' %>" data-index="<%= i %>"></i>
+										<% } %>
+										<a class="btn-next" href="javascript:void(0)"></a>
+									</div>
+								</div>
+							</script>
+
+						</div>
+
+					</div>
+					
+					<div class="extra">
+					<link rel="stylesheet" href="css/home.css" />
+					<link rel="stylesheet" href="css/unknown.css" />
+					<div class="aside">
+
+						<div id="billboard" class="s" data-dstat-areaid="75" data-dstat-mode="click,expose">
+						<br/>
+						
+						<div id="billboard" class="s" data-dstat-areaid="75" data-dstat-mode="click,expose">
+							<div class="billboard-hd">
+								<h2><span></span></h2>
+							</div>
+							
+						</div>
+
+					</div>
+					</div>
+			</div>
+		</div>
+		
+		</div>
+
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/reg_login_pop.css" />
+
+
+
+	</body>
+
+</html>

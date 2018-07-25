@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="always">
+		<title> 豆小荐 </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/myCSS.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+		<link href="css/douban.css" rel="stylesheet" type="text/css">
+		<link href="css/_all.css" rel="stylesheet" type="text/css">
+		<link href="css/init.css" rel="stylesheet">
+		<script type="text/javascript">
+			var _head_start = new Date();
+		</script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/douban.js"></script>
+		<script type="text/javascript" src="js/_all.js"></script>
+
+		<link rel="stylesheet" href="css/home.css" />
+
+		<script type='text/javascript'>
+			var _vwo_code = (function() {
+				var account_id = 249272,
+					settings_tolerance = 0,
+					library_tolerance = 2500,
+					use_existing_jquery = false,
+					// DO NOT EDIT BELOW THIS LINE
+					f = false,
+					d = document;
+				return {
+					use_existing_jquery: function() {
+						return use_existing_jquery;
+					},
+					library_tolerance: function() {
+						return library_tolerance;
+					},
+					finish: function() {
+						if(!f) {
+							f = true;
+							var a = d.getElementById('_vis_opt_path_hides');
+							if(a) a.parentNode.removeChild(a);
+						}
+					},
+					finished: function() {
+						return f;
+					},
+					load: function(a) {
+						var b = d.createElement('script');
+						b.src = a;
+						b.type = 'text/javascript';
+						b.innerText;
+						b.onerror = function() {
+							_vwo_code.finish();
+						};
+						d.getElementsByTagName('head')[0].appendChild(b);
+					},
+					init: function() {
+						settings_timer = setTimeout('_vwo_code.finish()', settings_tolerance);
+						var a = d.createElement('style'),
+							b = 'body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',
+							h = d.getElementsByTagName('head')[0];
+						a.setAttribute('id', '_vis_opt_path_hides');
+						a.setAttribute('type', 'text/css');
+						if(a.styleSheet) a.styleSheet.cssText = b;
+						else a.appendChild(d.createTextNode(b));
+						h.appendChild(a);
+						this.load('//dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&r=' + Math.random());
+						return settings_timer;
+					}
+				};
+			}());
+
+			+
+			function() {
+				var bindEvent = function(el, type, handler) {
+					var $ = window.jQuery || window.Zepto || window.$
+					if($ && $.fn && $.fn.on) {
+						$(el).on(type, handler)
+					} else if($ && $.fn && $.fn.bind) {
+						$(el).bind(type, handler)
+					} else if(el.addEventListener) {
+						el.addEventListener(type, handler, false);
+					} else if(el.attachEvent) {
+						el.attachEvent("on" + type, handler);
+					} else {
+						el["on" + type] = handler;
+					}
+				}
+
+				var _origin_load = _vwo_code.load
+				_vwo_code.load = function() {
+					var args = [].slice.call(arguments)
+					bindEvent(window, 'load', function() {
+						_origin_load.apply(_vwo_code, args)
+					})
+				}
+			}()
+
+			_vwo_settings_timer = _vwo_code.init();
+		</script>
+
+		<style type="text/css"></style>
+		<style type="text/css">
+			img {
+				max-width: 100%;
+			}
+		</style>
+		<script type="text/javascript"></script>
+		<link rel="stylesheet" href="css/unknown.css">
+		<link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+	<body>
+
+		<script type="text/javascript">
+			var _body_start = new Date();
+		</script>
+
+		<link href="css/body_bundle.css" rel="stylesheet" type="text/css">
+
+		<div id="db-global-nav" class="global-nav"">
+			<div class="bd">
+
+				<div class="top-nav-info">
+					<a href="index.html" id="logout" style="display: block; float: right;">退出登录</a>
+					<a href="manage-del-commit.html" id="manage" style="display: block; float: right;">管理</a>
+					<a href="user-homepage.html" id="homepage" style="display: block; float: right;">个人中心</a>
+				<script>
+					var user=2;
+					if (user==0){
+						document.getElementById("manage").style.display="none";
+						document.getElementById("homepage").style.display="none";
+						}
+					else if(user==1){document.getElementById("manage").style.display="none";}
+				</script>
+					
+				</div>
+
+			</div>
+		</div>
+
+
+		<script src="js/bundle.js" defer="defer"></script>
+
+		<link href="css/bundle.css" rel="stylesheet" type="text/css">
+
+		<div id="db-nav-movie" class="nav">
+			<div class="nav-wrap">
+				<div class="nav-primary">
+					<div class="">
+												<a href="index.html">
+						<img src="img/horse.jpg" style="float: left;"/></a>
+					</div>
+					<div class="nav-search">
+						<form action="" method="get">
+							<fieldset>
+								<legend>搜索：</legend>
+								<label for="inp-query">
+        					</label>
+								<div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影" value=""></div>
+								<div class="inp-btn"><input type="button" value="搜索" id="searchBtn"></div>
+							<script>
+								$("#searchBtn").click(function(){
+      							var searchText= jQuery.trim($("#inp-query").val());
+       							var searchUrl =encodeURI("search.html?searchText="+searchText);   //使用encodeURI编码
+      							window.location.href =searchUrl;
+   								})
+							</script>
+							
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="nav-secondary">
+
+				<div class="nav-items" style="float: left;">
+					<ul>
+						<li>
+							<a href="choose.html">选电影</a>
+						</li>
+						<li>
+							<a href="billboard.html">排行榜</a>
+						</li>
+						<li>
+							<a href="tag.html">分类</a>
+						</li>
+						<li>
+							<a href="user-collection.html">个人收藏</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+    <style type="text/css">
+  
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/59f798f5b75e51f0.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/19507ad/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+
+    <div id="dale_movie_subject_top_icon"></div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+
+            
+            <div class="article">
+               
+
+
+    
+
+
+
+
+<div id="db-usr-profile">
+
+<div class="pic">
+    <a href="">
+        <img src="https://img3.doubanio.com/icon/u170539411-1.jpg" alt="yali_ljh"/>
+    </a>
+</div>
+<div class="info">
+    <h1>
+        yali_ljh
+    <div id="edit_signature" class="j a_edit_signature edtext pl">
+        <span id="display" style="display: inline;"></span>
+
+    <form style="display: none;" action="/j/people/170539411/edit_signature"
+        name="edit_sign" method="post"><div style="display:none;"><input type="hidden" name="ck" value="bZpm"/></div>
+        <input name="signature" type="text" size="30" maxlength="30" value=""/>
+        <input class="submit" type="submit" value="修改" />
+        <input class="cancel" type="button" value="取消" />
+    </form>
+    <span id="error" class="attn" style="display: none;"></span>
+    </div>
+
+    </h1>
+
+</div>
+</div>
+<div class="clear"></div>
+
+        <script type="text/javascript" src="https://img3.doubanio.com/f/shire/49f3ec1a7041ef249202fc121e9fcc5c33d1da0b/js/ajaxfileupload.js"></script>
+        <script type="text/javascript" src="https://img3.doubanio.com/f/shire/73cf46ad95fa01d72800296a005c0ddbdc82fc3f/js/imgsel.js"></script>
+        <script type="text/javascript" src="js/userguide.js"></script>
+        
+
+<div class="about" id="about">
+	<div class="col-md-6 person-info-agileits-w3layouts">
+	<h1 class="">关于 <span id="username">ljh</span></h1>
+	
+	
+	<button id="infoedit" onclick="InfoChangeButton()" style="float: right;display: block;" >编辑</button>
+	<button type="submit" id="infosubmit" onclick="document.infoform.submit()" style="float: right;display: none;" >完成</button>
+	<button id="infocancle" onclick="InfoChangeCancle()" style="float: right;display: none;" >取消</button>
+	<script>
+		function InfoChangeButton()
+		{
+			//alert("asd");
+			var list=document.getElementsByClassName("infolist");
+			var edit=document.getElementsByClassName("infoedit");
+			document.getElementById("infosubmit").style.display="block";
+			document.getElementById("infocancle").style.display="block";
+			document.getElementById("infoedit").style.display="none";
+			var i;
+			for(i=0;i<list.length;i++){
+				list[i].style.display="none";
+			}
+			
+			for(i=0;i<edit.length;i++){
+				edit[i].style.display="block";
+			}
+			
+		}
+		function InfoChangeCancle()
+		{
+			//alert("asd");
+			var list=document.getElementsByClassName("infolist");
+			var edit=document.getElementsByClassName("infoedit");
+			document.getElementById("infosubmit").style.display="none";
+			document.getElementById("infocancle").style.display="none";
+			document.getElementById("infoedit").style.display="block";
+			var i;
+			for(i=0;i<list.length;i++){
+				list[i].style.display="block";
+			}
+			
+			for(i=0;i<edit.length;i++){
+				edit[i].style.display="none";
+			}
+			
+		}
+	</script>
+	<form name="infoform">
+		<ul>
+			<li class="infolist" style="display: block;"><span>昵称</span>: Andrew Smith</li>
+			<li class="infolist" style="display: block;"><span>性别</span>: info@example.com</li>
+			<li class="infolist" style="display: block;"><span>电话</span>: 28 Years</li>
+			<li class="infolist" style="display: block;"><span>兴趣</span>: +5 Years</li>	
+				
+			<li class="infoedit" style="display: none;"><span>昵称</span><input id="inputusername"></li>
+			<li class="infoedit" style="display: none;"><span>性别</span>
+			<input id="man" type="radio" checked="checked" name="1" />男
+			<input id="woman" type="radio"  name="1"/>女</li>
+			<li class="infoedit" style="display: none;"><span>电话</span><input id="inputusertele"></li>
+			<li class="infoedit" style="display: none;"><span>兴趣</span><input id="inputuserhobit"></li><br />
+			<li class="infoedit" style="display: none;"><span>密码</span><input id="inputpassword"></li>	
+		</ul>
+	</form>
+	</div>
+</div>
+
+
+
+            
+    <div class="sort " id="movie">
+    
+
+
+
+
+
+
+
+
+
+    
+    <h2 style="color: black;">
+        我的收藏 <span class="p1"><a href="user-collection.html阿萨德">查看全部</a></span>
+    </h2>
+            <div class="gaia">  
+    <ul class="item">
+		<li class="poster">
+		<a onclick="moreurl(this, {from:'mv_a_pst'})" href="">
+			<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" alt="我不是药神" rel="nofollow" class="" />
+		</a>
+		</li>
+		<li class="title">
+			<a onclick=" " href="" class="">我不是药神</a>
+		</li>
+	</ul>
+	<ul class="item">
+		<li class="poster">
+		<a onclick="moreurl(this, {from:'mv_a_pst'})" href="">
+			<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" alt="我不是药神" rel="nofollow" class="" />
+		</a>
+		</li>
+		<li class="title">
+			<a onclick=" " href="" class="">我不是药神</a>
+		</li>
+	</ul>
+	<ul class="item">
+		<li class="poster">
+		<a onclick="moreurl(this, {from:'mv_a_pst'})" href="">
+			<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" alt="我不是药神" rel="nofollow" class="" />
+		</a>
+		</li>
+		<li class="title">
+			<a onclick=" " href="" class="">我不是药神</a>
+		</li>
+	</ul>
+	<ul class="item">
+		<li class="poster">
+		<a onclick="moreurl(this, {from:'mv_a_pst'})" href="">
+			<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" alt="我不是药神" rel="nofollow" class="" />
+		</a>
+		</li>
+		<li class="title">
+			<a onclick=" " href="" class="">我不是药神</a>
+		</li>
+	</ul>
+	<ul class="item">
+		<li class="poster">
+		<a onclick="moreurl(this, {from:'mv_a_pst'})" href="">
+			<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.jpg" alt="我不是药神" rel="nofollow" class="" />
+		</a>
+		</li>
+		<li class="title">
+			<a onclick=" " href="" class="">我不是药神</a>
+		</li>
+	</ul>
+            <div class="clear"></div></div>
+
+    </div>
+
+            
+    <div class="sort " id="music">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+            
+    <div class="sort " id="drama">
+    
+    </div>
+
+            
+    <div class="sort " id="board">
+    
+
+
+<ul class="mbt" id="comments">
+</ul>
+
+
+<script type="text/javascript" src="https://img3.doubanio.com/f/shire/942d0988a8cb95e8ceb133232d6ced23241b26c5/js/report_dialog.js"></script>
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/b45aa277f8b8df40596b96582dafb1ed0a899a64/css/report_dialog.css" />
+
+
+    </div>
+
+        </div>
+        <div class="aside">
+
+<span></span>
+<div class="bd">
+
+<img id="cropedBigImg" value='custom' class="userface" alt="头像" 
+	src="https://img3.doubanio.com/icon/ul170539411-1.jpg"/>
+	<!-- 保存用户自定义的背景图片 -->		
+<link rel="stylesheet" href="css/button.css" />
+	<div id=changebutton>
+		<button id="change" onclick="ChangeImageButton()" style="display: block;">更改</button>
+		<form name="photoform">
+		<div id="imageSubmit" style="display: none;">
+		<input type="file" id="chooseImage" name="file" style="width: 150px;" >
+		<button type="submit" id="imageSubmit" onclick="document.photoform.submit()">提交</button></div>
+		</form>
+	</div>
+	
+	<script>
+		//wc
+		function ChangeImageButton(){
+			document.getElementById("change").style.display="none";
+			document.getElementById("chooseImage").style.display="block";
+			document.getElementById("imageSubmit").style.display="block";
+		}
+		
+	</script>
+	<script>
+		//wc
+	$('#chooseImage').on('change',function(){
+    var filePath = $(this).val(),         //获取到input的value，里面是文件的路径
+    fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+    src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+	// 检查是否是图片
+    if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {
+    error_prompt_alert('上传错误,文件格式必须为：png/jpg/jpeg');
+    return;  
+    }
+    $('#cropedBigImg').attr('src',src);
+	});
+	</script>
+
+<div class="user-intro">
+
+
+
+</div>
+
+</div>
+<div class="ex2"><span></span></div>
+
+
+
+
+<script src="https://img3.doubanio.com/f/shire/d0eb00d8781aeb03e0351d1647d7fc58e0a6ef53/js/jquery_plugin/jquery.elastic.js"></script>
+
+
+  <div class="clear"></div>
+
+
+
+    
+
+    <div id="statuses">
+      <div class="stream-items">
+      </div>
+    </div>
+
+
+
+<div id="friend">
+</div>
+
+       
+    <div class="sort " id="event">
+    
+
+
+    </div>
+
+            
+    <div class="sort " id="online">
+    
+
+    </div>
+
+            
+    <div class="sort " id="doulist">
+    
+
+
+    </div>
+
+            
+    <div class="sort " id="group">
+ 
+
+<div class="clear"></div>
+
+    </div>
+
+
+        </div>
+        <div class="extra">
+            
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+

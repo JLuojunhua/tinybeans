@@ -1,0 +1,99 @@
+body,
+#Mdown {
+	margin: 1px;
+	padding: 1px;
+	text-align: center;
+	font: "微软雅黑";
+}
+
+#loginBox {
+	margin-left: 30%;
+	margin-top: 10%;
+	text-align: left;
+	width: 450px;
+	height: 350px;
+	background: white;
+	font-size: 15pt;
+	border: 2px solid gray;
+	overflow: hidden;
+	
+	opacity: 1;
+	z-index:100; 
+	top: 0px;
+	left: 0px;
+	right: 0px;
+
+
+}
+#loginBgDiv {
+	width: 100%;
+	height: 150%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color:#888;
+	opacity: 0.7;
+	z-index:99; 
+}
+#loginBox .title {
+	height: 25px;
+	line-height: 25px;
+	cursor: move;
+}
+
+#loginBox .close {
+	float: right;
+	background-color: white;
+	color: gray;
+	border: hidden;
+}
+
+#loginBox .close:active {
+	float: right;
+	background-color: white;
+	color: red;
+	border: white;
+}
+
+#loginBox .login {
+	margin-top: 4%;
+	text-align: center;
+	height: 100%;
+	width: 60%;
+	margin-left: 20%;
+}
+
+#loginBox .t1 {
+	float: inherit;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: black;
+}
+
+#loginBox .submitButton {
+	float: inherit;
+	border: 1px solid #829AFF;
+	FONT-SIZE: 15px;
+	background: #EAEEFF;
+	HEIGHT: 25px;
+	width: 92%;
+	background-color: dodgerblue;
+	color: white;
+	border: solid slategray 1px;
+}
+#loginBox .registrationButton {
+	float: inherit;
+	border: 1px solid #829AFF;
+	FONT-SIZE: 15px;
+	background: #EAEEFF;
+	HEIGHT: 25px;
+	width: 92%;
+	background-color: orangered;
+	color: white;
+	border: solid slategray 1px;
+}
+#loginBox .input {
+	width: 90%;
+}

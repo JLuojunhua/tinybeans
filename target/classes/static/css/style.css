@@ -1,0 +1,106 @@
+/*-- /about --*/
+.gallery_wthree, .work, .services, .skills-agileinfo, .mid-w3layouts {
+	padding: 5em 0em;
+}
+.white-agile{
+	color:#fff!important;
+}
+.about-left-w3ls {
+    background: url(../images/about.jpg)no-repeat 0px 0px;
+    background-size: cover;
+    padding: 0;
+    min-height: 794px;
+    position: relative;
+    text-align: center;
+    z-index: 999;
+    margin: 0;
+}
+.jarallax {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.about-left-w3ls h5 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    position: relative;
+    margin: 6em 2em 0 0;
+    line-height: 35px;
+    float: right;
+}
+.about-left-w3ls h5 span {
+    color: #00acee;
+    font-size: 1em!important;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #000;
+}
+.about-left-w3ls h5 i {
+    display: block;
+    position: absolute;
+    top: 3.5em;
+    right: -0.5em;
+    color: #0086fe;
+    font-size: 0.5em!important;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.69);
+}
+.person-info-agileits-w3layouts {
+    padding: 5em;
+}
+.person-info-agileits-w3layouts ul {
+    margin-top: 3.75em;
+}
+.person-info-agileits-w3layouts ul li {
+    list-style: none;
+    display: block;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+.person-info-agileits-w3layouts ul li:nth-child(8) {
+    margin-bottom: 0!important;
+}
+.person-info-agileits-w3layouts ul li span {
+    width: 141px;
+    display: inline-block;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+.person-info-agileits-w3layouts ul li a{
+    color: #8a8a8a;
+}
+.person-info-agileits-w3layouts ul li a:hover{
+    color: #ecb731;
+}
+.person-info-agileits-w3layouts ul li a.botton-w3ls {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    background: #0086fe;
+    margin: 10px 10px 0 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+	letter-spacing: .5px;
+}
+.person-info-agileits-w3layouts ul li a.botton-w3ls:hover {
+    background: #ecb731;
+    color: #fff;
+    text-decoration: none;
+	outline:none;
+}
+.person-info-agileits-w3layouts p span{
+    color: #ecb731;
+    font-size: 19px;
+}
+.person-info-agileits-w3layouts p{
+    color: #303030;
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+}
+/*-- //about --*/

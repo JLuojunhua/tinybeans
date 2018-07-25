@@ -1,0 +1,15 @@
+package com.qqdzz.tinybean.dao;
+
+import com.qqdzz.tinybean.entity.Score;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
+
+@Mapper
+@Component
+public interface ScoreMapper {
+    int add(Score collection);//返回插入行数
+    int delete(Integer id);
+    int update(Score collection);//返回修改行数
+    Score findById(Integer id);
+    Score getScore(Integer userId, Integer movieId);
+}

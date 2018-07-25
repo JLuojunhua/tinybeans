@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.CommentMapper" >
+    <!--映射-->
+    <resultMap id="CommentResult" type="entity.Comment">
+        <id column = "id" property = "id"/>
+        <result column = "movieId" property = "movieId"/>
+        <result column = "userId" property = "userId"/>
+        <result column = "Comment" property = "Comment"/>
+    </resultMap>
+
+    <!--接口实现-->
+    <insert id="add" parameterType="Comment">
+        insert into comment (id,movie_id,user_id,comment)
+        value (#{id}, #{movieId}, #{user_id}, #{comment})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE FROM comment WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="Comment">
+        update comment set
+        movie_id = #{movie_id},
+        user_id = #{userId}
+        comment = #{comment},
+        where id = #{id};
+    </update>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="Comment">
+        SELECT * FROM comment where id = #{id}
+    </select>
+
+    <select id="findByUserId" resultMap="CommentResult">
+        select * from comment where user_id = #{userId}
+    </select>
+
+    <select id="findByCommentText" resultMap="CommentResult">
+        select * from comment where comment LIKE '%#{commentText}%'
+    </select>
+
+    <select id="findBannedAll" resultMap="CommentResult">
+        SELECT * FROM comment where is_banned = 1
+    </select>
+
+    <select id="findByMovieId" resultMap="CommentResult">
+        SELECT * FROM comment where movie_id = #{movieId}
+    </select>
+
+    <select id="findByMovieId" resultMap="CommentResult">
+        SELECT * FROM comment where movie_id = #{movieId} and user_id = #{userId}
+    </select>
+</mapper>
