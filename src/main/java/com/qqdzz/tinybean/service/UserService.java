@@ -1,6 +1,7 @@
 package com.qqdzz.tinybean.service;
 
 import com.qqdzz.tinybean.dao.UserMapper;
+import com.qqdzz.tinybean.entity.JsonResult;
 import com.qqdzz.tinybean.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,9 +26,14 @@ public class UserService {
         return userMapper.update(user) > 0;
     }
 
-    //
+    /**
+     *
+     * @param userId
+     * @param icon
+     * @return
+     */
     public boolean doModifyIcon(Integer userId, String icon){
-        return true;
+        return userMapper.updatePhoto(userId, icon)>0;
     }
 
     public boolean doRemove(int id){
@@ -38,9 +44,13 @@ public class UserService {
         return userMapper.findById(id);
     }
 
-    //
+    /**
+     *
+     * @param userName
+     * @return
+     */
     public User findByUserName(String userName){
-        User user = new User();
+        User user = userMapper.findByUserName(userName);
         return user;
     }
 
@@ -48,7 +58,23 @@ public class UserService {
         return userMapper.findAll();
     }
 
-    public Integer login(String userName, String password) {
-        return 0;
+    /**
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
+    public JsonResult<Integer> login(String userName, String password) {
+        int isUser = userMapper.isUser(userName, password);
+        if (isUser > 0) {
+            int root = userMapper.isRoot(userName);
+            if (root == 0) {
+                return new JsonResult<Integer>(1);
+            } else {
+                return new JsonResult<Integer>(2);
+            }
+        } else {
+            return new JsonResult<Integer>(0);
+        }
     }
 }

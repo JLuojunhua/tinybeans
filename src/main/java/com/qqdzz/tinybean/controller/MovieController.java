@@ -103,8 +103,18 @@ public class MovieController {
      * @return
      */
     @GetMapping("/newmovie")
-    public JsonResult<MovieVO> NewestMovieListInIndex() {
+    public JsonResult<MovieVO> newestMovieListInIndex() {
+        List<Movie> movieList = movieService.sortMovieByTime();
         List<MovieVO> movieVOList = new ArrayList<MovieVO>();
+        int num = 15;
+        for (int i = 0; i < num; i++) {
+            Movie movie = movieList.get(i);
+            if (movie != null) {
+                movieVOList.add(new MovieVO(movie.getMovieName(), movie.getId(), movie.getScore(), movie.getIcon()));
+            } else {
+                break;
+            }
+        }
         return new JsonResult<MovieVO>(movieVOList);
     }
 
@@ -135,9 +145,19 @@ public class MovieController {
      * @return
      */
     @GetMapping("/commentList")
-    public JsonResult<MovieListVO> commentMovieList() {
-        List<MovieListVO> movieListVOS = new ArrayList<MovieListVO>();
-        return new JsonResult<MovieListVO>(movieListVOS);
+    public JsonResult<MovieVO> commentMovieList() {
+        List<Movie> movieList = movieService.sortMovieByHot();
+        List<MovieVO> movieVOList = new ArrayList<MovieVO>();
+        int num = 15;
+        for (int i = 0; i < num; i++) {
+            Movie movie = movieList.get(i);
+            if (movie != null) {
+                movieVOList.add(new MovieVO(movie.getMovieName(), movie.getId(), movie.getScore(), movie.getIcon()));
+            } else {
+                break;
+            }
+        }
+        return new JsonResult<MovieVO>(movieVOList);
     }
 
     /**
@@ -145,9 +165,19 @@ public class MovieController {
      * @return
      */
     @GetMapping("/ratingList")
-    public JsonResult<MovieListVO> ratingMovieList() {
-        List<MovieListVO> movieListVOS = new ArrayList<MovieListVO>();
-        return new JsonResult<MovieListVO>(movieListVOS);
+    public JsonResult<MovieVO> ratingMovieList() {
+        List<Movie> movieList = movieService.sortMovieByScore();
+        List<MovieVO> movieVOList = new ArrayList<MovieVO>();
+        int num = 15;
+        for (int i = 0; i < num; i++) {
+            Movie movie = movieList.get(i);
+            if (movie != null) {
+                movieVOList.add(new MovieVO(movie.getMovieName(), movie.getId(), movie.getScore(), movie.getIcon()));
+            } else {
+                break;
+            }
+        }
+        return new JsonResult<MovieVO>(movieVOList);
     }
 
     /**
@@ -184,11 +214,12 @@ public class MovieController {
     public JsonResult<Movie> billboardMovie(int type, int page) {
         List<Movie> movieList = new ArrayList<Movie>();
         List<Movie> movies = new ArrayList<>();
-        if (type == 1) {
+        int hot = 1, score = 2, time = 3;
+        if (type == hot) {
             movieList = movieService.sortMovieByHot();
-        } else if (type == 2) {
+        } else if (type == score) {
             movieList = movieService.sortMovieByScore();
-        } else if (type == 3) {
+        } else if (type == time) {
             movieList = movieService.sortMovieByTime();
         }
         int a = page*10;

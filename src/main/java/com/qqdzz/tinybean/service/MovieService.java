@@ -39,33 +39,53 @@ public class MovieService {
         return movie;
     }
 
-    //
+    /**
+     *
+     * @param movieName
+     * @return
+     */
     public Movie findByMovieName(String movieName){
-        Movie movie = new Movie();
+        Movie movie = movieMapper.findByMovieName(movieName);
         return movie;
     }
 
-    //
+    /**
+     *
+     * @param director
+     * @return
+     */
     public List<Movie> findByDirector(String director){
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.findByDirector(director);
         return movieList;
     }
 
-    //
+    /**
+     *
+     * @param mainactor
+     * @return
+     */
     public List<Movie> findByMainactor(String mainactor){
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.findByMainactor(mainactor);
         return movieList;
     }
 
-    //
+    /**
+     *
+     * @param classification
+     * @return
+     */
     public List<Movie> findByClassification(String classification){
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.findByClassification(classification);
         return movieList;
     }
 
-    //
+    /**
+     *
+     * @param date
+     * @return
+     */
     public List<Movie> findByDate(String date){
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.findByDate(date);
         return movieList;
     }
 
@@ -73,27 +93,27 @@ public class MovieService {
         return movieMapper.findAll();
     }
 
-    //
-    public List<Movie> findByCondition(String movieName) {
-        List<Movie> movieList = new ArrayList<Movie>();
-        return movieList;
-    }
-
-    //
+    /**
+     *
+     * @return
+     */
     public List<Movie> sortMovieByHot() {
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.sortMovieByHot();
         return movieList;
     }
 
-    //
+    /**
+     *
+     * @return
+     */
     public List<Movie> sortMovieByScore() {
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.sortMovieByScore();
         return movieList;
     }
 
     //
     public List<Movie> sortMovieByTime() {
-        List<Movie> movieList = new ArrayList<Movie>();
+        List<Movie> movieList = movieMapper.sortMovieByTime();
         return movieList;
     }
 }

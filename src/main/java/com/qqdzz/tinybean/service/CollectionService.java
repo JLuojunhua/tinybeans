@@ -42,9 +42,13 @@ public class CollectionService {
         return collection;
     }
 
-    //
+    /**
+     *
+     * @param userId
+     * @return
+     */
     public List<Collection> findByUserID(Integer userId){
-        List<Collection> collectionList = new ArrayList<Collection>();
+        List<Collection> collectionList = collectionMapper.findByUserId(userId);
         return collectionList;
     }
 }

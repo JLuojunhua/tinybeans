@@ -27,7 +27,7 @@ public class ScoreService {
     }
 
     public Score getScore(Integer userId, Integer movieId) {
-        Score score = new Score();
+        Score score = scoreMapper.getScore(userId, movieId);
         return score;
     }
 }
