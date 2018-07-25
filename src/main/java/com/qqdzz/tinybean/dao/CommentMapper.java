@@ -9,9 +9,9 @@ import java.util.List;
 @Mapper
 @Component
 public interface CommentMapper {
-    int add(Comment collection);
+    int add(Comment comment);
     int delete(Integer id);
-    int update(Comment collection);
+    int update(Comment comment);
     Comment findById(Integer id);
     List<Comment> findByUserId(Integer userId);
     List<Comment> findByCommentText(String commentText);

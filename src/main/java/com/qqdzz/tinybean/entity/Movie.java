@@ -248,4 +248,30 @@ public class Movie {
     public void setIcon(String icon) {
         this.icon = icon;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", movieName='" + movieName + '\'' +
+                ", commentNum=" + commentNum +
+                ", director='" + director + '\'' +
+                ", scriptwriter='" + scriptwriter + '\'' +
+                ", mainactor='" + mainactor + '\'' +
+                ", classification='" + classification + '\'' +
+                ", produceCountry='" + produceCountry + '\'' +
+                ", language='" + language + '\'' +
+                ", date='" + date + '\'' +
+                ", year=" + year +
+                ", movieDuration='" + movieDuration + '\'' +
+                ", score=" + score +
+                ", scorePopulation=" + scorePopulation +
+                ", icon='" + icon + '\'' +
+                ", oneStar=" + oneStar +
+                ", twoStar=" + twoStar +
+                ", threeStar=" + threeStar +
+                ", fourStar=" + fourStar +
+                ", fiveStar=" + fiveStar +
+                '}';
+    }
 }

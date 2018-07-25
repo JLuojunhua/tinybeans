@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping
 public class MovieController {
 
     @Autowired
@@ -185,7 +184,7 @@ public class MovieController {
      * @param time
      * @return
      */
-    @GetMapping("choosemovie")
+    @GetMapping("/choosemovie")
     public JsonResult<MovieVO> chooseMovie(int time) {
         List<MovieVO> movieVOList = new ArrayList<MovieVO>();
         List<Movie> movieList = movieService.findAll();

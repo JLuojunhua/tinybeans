@@ -112,5 +112,17 @@ public class JsonResult<T> {
         return pagedatas!=null?pagedatas.getList():null;
     }
 
+    @Override
+    public String toString() {
+        return "JsonResult{" +
+                "state=" + state +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                ", datas=" + datas +
+                ", pagedatas=" + pagedatas +
+                ", total=" + total +
+                ", rows=" + rows +
+                '}';
+    }
 }
 

@@ -10,9 +10,9 @@ import java.util.List;
 @Mapper
 @Component
 public interface MovieMapper {
-    int add(Movie collection);
+    int add(Movie movie);
     int delete(Integer id);
-    int update(Movie collection);
+    int update(Movie movie);
     Movie findById(Integer id);
     List<Movie> findAll();
     Movie findByMovieName(String movieName);

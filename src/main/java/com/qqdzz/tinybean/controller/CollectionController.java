@@ -1,6 +1,6 @@
 package com.qqdzz.tinybean.controller;
 
-import com.qqdzz.tinybean.entity.Collection;
+import com.qqdzz.tinybean.entity.Collection1;
 import com.qqdzz.tinybean.entity.JsonResult;
 import com.qqdzz.tinybean.entity.Movie;
 import com.qqdzz.tinybean.service.CollectionService;
@@ -18,7 +18,6 @@ import java.util.List;
  * @author
  */
 @RestController
-@RequestMapping
 public class CollectionController {
 
     @Autowired
@@ -33,11 +32,11 @@ public class CollectionController {
      */
     @GetMapping("/getusercollection")
     public JsonResult<MovieCollectionVO> getUserCollection(Integer userId){
-        List<Collection> collectionList = collectionService.findByUserID(userId);
+        List<Collection1> collection1List = collectionService.findByUserID(userId);
         List<MovieCollectionVO> movieCollectionVOList = new ArrayList<MovieCollectionVO>();
         int movieNum = 0;
-        for (Collection collection : collectionList) {
-            Movie movie = movieService.findById(collection.getMovieId());
+        for (Collection1 collection1 : collection1List) {
+            Movie movie = movieService.findById(collection1.getMovieId());
             if (movie == null) {
                 break;
             }
@@ -59,10 +58,10 @@ public class CollectionController {
      */
     @GetMapping("/getuserallcollection")
     public JsonResult<MovieCollectionVO> getUserAllCollection(Integer userId){
-        List<Collection> collectionList = collectionService.findByUserID(userId);
+        List<Collection1> collection1List = collectionService.findByUserID(userId);
         List<MovieCollectionVO> movieCollectionVOList = new ArrayList<MovieCollectionVO>();
-        for (Collection collection : collectionList) {
-            Movie movie = movieService.findById(collection.getMovieId());
+        for (Collection1 collection1 : collection1List) {
+            Movie movie = movieService.findById(collection1.getMovieId());
             if (movie == null) {
                 break;
             }

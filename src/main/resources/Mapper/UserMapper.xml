@@ -2,16 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dao.UserMapper" >
+<mapper namespace="com.qqdzz.tinybean.dao.UserMapper" >
     <!--映射-->
-    <resultMap type="entity.User" id="UserResult">
+    <resultMap type="com.qqdzz.tinybean.entity.User" id="UserResult">
         <id column = "id" property = "id"/>
-        <result column = "isRoot" property = "isRoot"/>
+        <result column = "is_root" property = "isRoot"/>
         <result column = "icon" property = "icon"/>
-        <result column = "userPassword" property = "userPassword"/>
-        <result column = "userSex" property = "userSex"/>
-        <result column = "userPhoneNum" property = "userPhoneNum"/>
-        <result column = "userLikeCategories" property = "userLikeCategories"/>
+        <result column = "user_password" property = "userPassword"/>
+        <result column = "user_sex" property = "userSex"/>
+        <result column = "user_phone_num" property = "userPhoneNum"/>
+        <result column = "user_like_categories" property = "userLikeCategories"/>
     </resultMap>
 
     <!--接口实现-->

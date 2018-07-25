@@ -1,11 +1,10 @@
 package com.qqdzz.tinybean.service;
 
 import com.qqdzz.tinybean.dao.CollectionMapper;
-import com.qqdzz.tinybean.entity.Collection;
+import com.qqdzz.tinybean.entity.Collection1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,13 +16,13 @@ public class CollectionService {
     @Autowired
     private CollectionMapper collectionMapper;
 
-    public boolean doAdd(Collection collection){
-        int row = collectionMapper.add(collection);
+    public boolean doAdd(Collection1 collection1){
+        int row = collectionMapper.add(collection1);
         return row>0;
     }
 
-    public boolean doModify(Collection collection){
-       int row = collectionMapper.update(collection);
+    public boolean doModify(Collection1 collection1){
+       int row = collectionMapper.update(collection1);
        return row>0;
     }
 
@@ -37,9 +36,9 @@ public class CollectionService {
      * @param id
      * @return
      */
-    public Collection findById(Integer id){
-        Collection collection = collectionMapper.findById(id);
-        return collection;
+    public Collection1 findById(Integer id){
+        Collection1 collection1 = collectionMapper.findById(id);
+        return collection1;
     }
 
     /**
@@ -47,8 +46,8 @@ public class CollectionService {
      * @param userId
      * @return
      */
-    public List<Collection> findByUserID(Integer userId){
-        List<Collection> collectionList = collectionMapper.findByUserId(userId);
-        return collectionList;
+    public List<Collection1> findByUserID(Integer userId){
+        List<Collection1> collection1List = collectionMapper.findByUserId(userId);
+        return collection1List;
     }
 }

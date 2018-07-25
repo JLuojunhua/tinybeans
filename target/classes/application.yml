@@ -3,7 +3,7 @@ version: 2.0
 spring:
   profiles:
     active: dev
-  datasource:
+  dataSource:
     url: jdbc:mysql://47.106.201.128:3306/tinybean
     username: movie
     password: qqq
@@ -37,6 +37,6 @@ spring:
     mode: LEGACYHTML5
 
 mybatis:
-  mapper-locations: classpath:com/etc/mapper/*.xml
-  typeAliasesPackage: com.etc.entity
+  mapper-locations: classpath:/Mapper/*.xml
+  typeAliasesPackage: com.qqdzz.tinybean.entity
 

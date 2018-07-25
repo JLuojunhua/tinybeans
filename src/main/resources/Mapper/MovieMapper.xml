@@ -2,28 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dao.MovieMapper" >
+<mapper namespace="com.qqdzz.tinybean.dao.MovieMapper" >
     <!--映射-->
-    <resultMap type="entity.Movie" id="MovieResult">
+    <resultMap type="com.qqdzz.tinybean.entity.Movie" id="MovieResult">
         <id column = "id" property = "id"/>
-        <result column = "movieName" property = "movieName"/>
-        <result column = "commentNum" property = "commentNum"/>
+        <result column = "movie_name" property = "movieName"/>
+        <result column = "comment_num" property = "commentNum"/>
         <result column = "director" property = "director"/>
         <result column = "scriptwriter" property = "scriptwriter"/>
         <result column = "mainactor" property = "mainactor"/>
-        <result column = "produceCountry" property = "produceCountry"/>
+        <result column = "produce_country" property = "produceCountry"/>
         <result column = "language" property = "language"/>
         <result column = "date" property = "date"/>
         <result column = "year" property = "year"/>
-        <result column = "movieDuration" property = "movieDuration"/>
+        <result column = "movie_duration" property = "movieDuration"/>
         <result column = "score" property = "score"/>
-        <result column = "scorePopulation" property = "scorePopulation"/>
+        <result column = "score_population" property = "scorePopulation"/>
         <result column = "icon" property = "icon"/>
-        <result column = "oneStar" property = "oneStar"/>
-        <result column = "twoStar" property = "twoStar"/>
-        <result column = "threeStar" property = "threeStar"/>
-        <result column = "fourStar" property = "fourStar"/>
-        <result column = "fiveStar" property = "fiveStar"/>
+        <result column = "one_star" property = "oneStar"/>
+        <result column = "two_star" property = "twoStar"/>
+        <result column = "three_star" property = "threeStar"/>
+        <result column = "four_star" property = "fourStar"/>
+        <result column = "five_star" property = "fiveStar"/>
     </resultMap>
 
     <!--接口实现-->

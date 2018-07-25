@@ -2,37 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dao.CollectionMapper" >
+<mapper namespace="com.qqdzz.tinybean.dao.CollectionMapper" >
     <!--映射-->
-    <resultMap id="CollectionResult" type="entity.Collection">
+    <resultMap id="CollectionResult" type="com.qqdzz.tinybean.entity.Collection1">
         <id column = "id" property = "id"/>
         <result column = "movie_id" property = "movieId"/>
         <result column = "user_id" property = "userId"/>
     </resultMap>
 
     <!--接口实现-->
-    <insert id="add" parameterType="Collection">
-        insert into collection (id,movie_id,user_id)
+    <insert id="add" parameterType="com.qqdzz.tinybean.entity.Collection1">
+        insert into collection1 (id,movie_id,user_id)
         value (#{id}, #{movieId}, #{userId})
     </insert>
 
     <delete id="delete" parameterType="java.lang.Integer">
-        DELETE FROM collection WHERE id = #{id}
+        DELETE FROM collection1 WHERE id = #{id}
     </delete>
 
-    <update id="update" parameterType="Collection">
-        update collection set
+    <update id="update" parameterType="com.qqdzz.tinybean.entity.Collection1">
+        update collection1 set
         movie_id = #{movie_id},
         user_id = #{userId}
         where id = #{id};
     </update>
 
-    <select id="findById" parameterType="java.lang.Integer" resultType="Collection">
-        SELECT * FROM collection where id = #{id}
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.qqdzz.tinybean.entity.Collection1">
+        SELECT * FROM collection1 where id = #{id}
     </select>
 
-    <!--<Collection> findByUserId();-->
+    <!--<Collection1> findByUserId();-->
     <select id="findByUserId" resultMap="CollectionResult">
-        select * from collection where user_id = #{userId}
+        select * from collection1 where user_id = #{userId}
     </select>
 </mapper>

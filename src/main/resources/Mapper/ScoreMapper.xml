@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="dao.ScoreMapper" >
+<mapper namespace="com.qqdzz.tinybean.dao.ScoreMapper" >
     <!--映射-->
-    <resultMap type="entity.Score" id="ScoreResult">
+    <resultMap type="com.qqdzz.tinybean.entity.Score" id="ScoreResult">
         <id column = "id" property = "id"/>
-        <result column = "movieId" property = "movieId"/>
-        <result column = "userId" property = "userId"/>
-        <result column = "Score" property = "Score"/>
+        <result column = "movie_id" property = "movieId"/>
+        <result column = "user_id" property = "userId"/>
+        <result column = "score" property = "score"/>
     </resultMap>
 
     <!--接口实现-->

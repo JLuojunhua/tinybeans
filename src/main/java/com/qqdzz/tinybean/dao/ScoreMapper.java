@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 @Mapper
 @Component
 public interface ScoreMapper {
-    int add(Score collection);//返回插入行数
+    int add(Score score);//返回插入行数
     int delete(Integer id);
-    int update(Score collection);//返回修改行数
+    int update(Score score);//返回修改行数
     Score findById(Integer id);
     Score getScore(Integer userId, Integer movieId);
 }
