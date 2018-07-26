@@ -25,6 +25,10 @@ public class MovieService {
         return movieMapper.update(movie) > 0;
     }
 
+    public boolean modifyScore(Integer movieId, Double score) {
+        return movieMapper.modifyScore(movieId, score) > 0;
+    }
+
     public boolean doRemove(int id) {
         return movieMapper.delete(id) > 0;
     }
@@ -44,9 +48,9 @@ public class MovieService {
      * @param movieName
      * @return
      */
-    public Movie findByMovieName(String movieName){
-        Movie movie = movieMapper.findByMovieName(movieName);
-        return movie;
+    public List<Movie> findByMovieName(String movieName){
+        List<Movie> movieList = movieMapper.findByMovieName(movieName);
+        return movieList;
     }
 
     /**

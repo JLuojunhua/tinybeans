@@ -16,7 +16,7 @@ public interface MovieMapper {
     int update(Movie movie);
     Movie findById(Integer id);
     List<Movie> findAll();
-    Movie findByMovieName(String movieName);
+    List<Movie> findByMovieName(String movieName);
     List<Movie> findByDirector(String director);
     List<Movie> findByMainactor(String mainactor);
     List<Movie> findByClassification(@Param("classification") String classification);
@@ -24,4 +24,5 @@ public interface MovieMapper {
     List<Movie> sortMovieByHot();
     List<Movie> sortMovieByScore();
     List<Movie> sortMovieByTime();
+    int modifyScore(@Param("movieId") Integer movieId,@Param("score") Double score);
 }

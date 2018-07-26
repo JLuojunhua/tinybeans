@@ -69,11 +69,11 @@ public class CommentService {
 
     /**
      *
-     * @param movieName
+     * @param movieId
      * @return
      */
-    public List<Comment> findByMovieName(String movieName) {
-        Movie movie = movieMapper.findByMovieName(movieName);
+    public List<Comment> findByMovieId(Integer movieId) {
+        Movie movie = movieMapper.findById(movieId);
         List<Comment> commentList = commentMapper.findByMovieId(movie.getId());
         return commentList;
     }

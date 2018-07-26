@@ -24,12 +24,15 @@ public class MovieController {
      * @return
      */
     @GetMapping("/movie")
-    public JsonResult<Movie> getMovieByCondition(String condition){
+    public JsonResult<Movie> getMovieByCondition(String condition, int page){
+
         List<Movie> movieList = new ArrayList<Movie>();
         String movieName = condition;
-        Movie movie = movieService.findByMovieName(movieName);
-        if (movie != null) {
-            movieList.add(movie);
+        List<Movie> movieByName = movieService.findByMovieName(movieName);
+        if (movieByName != null) {
+            for (Movie m : movieByName) {
+                movieList.add(m);
+            }
         }
 
         String director = condition;
@@ -61,7 +64,14 @@ public class MovieController {
                 movieList.add(m);
             }
         }
-        return new JsonResult<Movie>(movieList);
+
+        List<Movie> movies = new ArrayList<Movie>();
+        int pageA = page*10, pageB = page*10+9;
+        pageB = (pageB>movieList.size()-1?movieList.size()-1:pageB);
+        for (int i = pageA; i <= pageB; i++) {
+            movies.add(movieList.get(i));
+        }
+        return new JsonResult<Movie>(movies);
     }
 
     /**
@@ -246,6 +256,7 @@ public class MovieController {
         List<MovieVO> movieVOList = new ArrayList<MovieVO>();
         int pageA = page*16;
         int pageB = page*16+15;
+        pageB = (pageB>movieList.size()-1?movieList.size()-1:pageB);
         for (int i = pageA; i<= pageB; i++) {
             Movie movie = movieList.get(i);
             if (movie != null) {
@@ -268,10 +279,22 @@ public class MovieController {
         return this.getMovieById(movieId);
     }
 
+    /**
+     * 电影下的推荐列表
+     * @param movieId
+     * @return
+     */
     @GetMapping("/getrecommendamovies")
     public JsonResult<MovieVO> getRecommendaMovies(Integer movieId) {
         Movie movieById = movieService.findById(movieId);
-        List<Movie> movieList = movieService.findByClassification(movieById.getClassification());
+        String []classifications = movieById.getClassification().split("\\/");
+        List<Movie> movieList = new ArrayList<Movie>();
+        for (String classification : classifications) {
+            List<Movie> movieByClassification = movieService.findByClassification(classification);
+            for (Movie movie : movieByClassification) {
+                movieList.add(movie);
+            }
+        }
         List<MovieVO> movieVOList = new ArrayList<MovieVO>();
         int num = 6;
         for (int i = 0; i < num; i++) {
