@@ -40,6 +40,10 @@ public class ScoreController {
     @GetMapping("/score")
     public JsonResult<Double> getScore(Integer userId, Integer movieId) {
         Score score = scoreService.getScore(userId, movieId);
-        return new JsonResult<Double>(score.getScore());
+        if (score == null) {
+            return new JsonResult<Double>(0.0);
+        } else {
+            return new JsonResult<Double>(score.getScore());
+        }
     }
 }

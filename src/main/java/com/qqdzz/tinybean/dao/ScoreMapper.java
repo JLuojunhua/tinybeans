@@ -2,6 +2,7 @@ package com.qqdzz.tinybean.dao;
 
 import com.qqdzz.tinybean.entity.Score;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 @Mapper
@@ -11,5 +12,5 @@ public interface ScoreMapper {
     int delete(Integer id);
     int update(Score score);//返回修改行数
     Score findById(Integer id);
-    Score getScore(Integer userId, Integer movieId);
+    Score getScore(@Param("userId") Integer userId,@Param("movieId") Integer movieId);
 }
