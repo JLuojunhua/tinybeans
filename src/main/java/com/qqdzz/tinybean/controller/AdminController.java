@@ -2,8 +2,10 @@ package com.qqdzz.tinybean.controller;
 
 import com.qqdzz.tinybean.entity.Comment;
 import com.qqdzz.tinybean.entity.JsonResult;
+import com.qqdzz.tinybean.entity.Movie;
 import com.qqdzz.tinybean.entity.User;
 import com.qqdzz.tinybean.service.CommentService;
+import com.qqdzz.tinybean.service.MovieService;
 import com.qqdzz.tinybean.service.UserService;
 import com.qqdzz.tinybean.vo.CommentVO;
 import com.qqdzz.tinybean.vo.SearchUserVO;
@@ -20,6 +22,8 @@ public class AdminController {
     private UserService userService;
     @Autowired
     private CommentService commentService;
+    @Autowired
+    private MovieService movieService;
 
     /**
      * 根据用户id或用户名查找用户
@@ -117,6 +121,32 @@ public class AdminController {
             }
         }
         return new JsonResult<CommentVO>(commentVOList);
+    }
+
+    @PostMapping("/addMovie")
+    public JsonResult addMovie(String movieName, String director, String scriptwriter, String mainactor, String produceCountry, String language, String date, String movieDuration, String classification) {
+        Movie movie = new Movie();
+        movie.setMovieName(movieName);
+        movie.setDirector(director);
+        movie.setScriptwriter(scriptwriter);
+        movie.setMainactor(mainactor);
+        movie.setProduceCountry(produceCountry);
+        movie.setLanguage(language);
+        movie.setDate(date);
+        movie.setMovieDuration(movieDuration);
+        movie.setClassification(classification);
+        movie.setOneStar(0);
+        movie.setTwoStar(0);
+        movie.setThreeStar(0);
+        movie.setFourStar(0);
+        movie.setFiveStar(0);
+        movie.setCommentNum(0);
+        movie.setScore(0.0);
+        if (movieService.doAdd(movie)) {
+            return new JsonResult("上传成功");
+        } else {
+            return new JsonResult("上传失败");
+        }
     }
 
 }
