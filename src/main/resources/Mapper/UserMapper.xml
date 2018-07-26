@@ -17,8 +17,8 @@
 
     <!--接口实现-->
     <insert id="add" parameterType="User">
-        INSERT INTO user (is_root,icon,user_password,user_sex,user_phone_num,user_like_categories)
-        value (#{isRoot},#{icon},#{userPassword},#{userSex},#{userPhoneNum},#{userLikeCategories})
+        INSERT INTO user (user_name,is_root,icon,user_password,user_sex,user_phone_num,user_like_categories)
+        value (#{userName},#{isRoot},#{icon},#{userPassword},#{userSex},#{userPhoneNum},#{userLikeCategories})
     </insert>
 
     <delete id="delete" parameterType="java.lang.Integer">

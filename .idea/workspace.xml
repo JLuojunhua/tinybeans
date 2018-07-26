@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eed07f3-9865-4364-940e-cb8e3f7f3bcf" name="Default" comment="又修改了一大堆的bug">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/CommentMapperTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/Comment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Mapper/CommentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/Mapper/CommentMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/billboard.html" afterPath="$PROJECT_DIR$/src/main/resources/static/billboard.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/choose.html" afterPath="$PROJECT_DIR$/src/main/resources/static/choose.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
@@ -16,9 +12,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/tag.html" afterPath="$PROJECT_DIR$/src/main/resources/static/tag.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/user-collection.html" afterPath="$PROJECT_DIR$/src/main/resources/static/user-collection.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/user-homepage.html" afterPath="$PROJECT_DIR$/src/main/resources/static/user-homepage.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/controller/LoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/controller/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/entity/Comment.class" afterPath="$PROJECT_DIR$/target/classes/com/qqdzz/tinybean/entity/Comment.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/CommentMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-109">
@@ -82,21 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/Comment.java">
+      <file leaf-file-name="ScoreController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/ScoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/dao/CommentMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="74" lean-forward="false" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+            <state relative-caret-position="396">
+              <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -115,63 +98,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieMapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/MovieMapperTest.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollectionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/CollectionMapper.xml">
+      <file leaf-file-name="MovieMapperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/MovieMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-              <folding>
-                <marker date="1532505324224" expanded="true" signature="593:683" ph="insert into collection... " />
-                <marker date="1532505324224" expanded="true" signature="766:806" ph="DELETE FROM collection... " />
-                <marker date="1532505324224" expanded="true" signature="909:1016" ph="update collection... " />
-                <marker date="1532505324224" expanded="true" signature="1153:1195" ph="SELECT * FRO... collection" />
-                <marker date="1532505324224" expanded="true" signature="1320:1371" ph="select * fro... collection" />
-              </folding>
+            <state relative-caret-position="308">
+              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/controller/MovieControllerTest.java">
+      <file leaf-file-name="MovieController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/MovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-              <folding>
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#1044#1045#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#1316#1317#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
-                <element signature="e#1524#1525#0" expanded="true" />
-                <element signature="e#1722#1723#0" expanded="true" />
-                <element signature="e#1806#1807#0" expanded="true" />
-                <element signature="e#1857#1858#0" expanded="true" />
-                <element signature="e#1948#1949#0" expanded="true" />
-                <marker date="1532626475114" expanded="true" signature="2131:2142" ph="..." />
-              </folding>
+            <state relative-caret-position="433">
+              <caret line="69" column="68" lean-forward="false" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="118" column="56" lean-forward="false" selection-start-line="118" selection-start-column="56" selection-end-line="118" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -180,10 +141,31 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="164">
+              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <marker date="1532630589175" expanded="true" signature="873:1084" ph="INSERT INTO USER... " />
+                <marker date="1532630589175" expanded="true" signature="1167:1200" ph="DELETE FROM USER... " />
+                <marker date="1532630589175" expanded="true" signature="1270:1528" ph="update USER... " />
+                <marker date="1532630589175" expanded="true" signature="1636:1671" ph="SELECT * FRO... USER" />
+                <marker date="1532630589175" expanded="true" signature="1744:1758" ph="select * fro... USER" />
+                <marker date="1532630589175" expanded="true" signature="1744:1762" ph="select * fro... user" />
+                <marker date="1532630589175" expanded="true" signature="1837:1900" ph="update user... " />
+                <marker date="1532630589175" expanded="true" signature="1980:2028" ph="select * fro... USER" />
+                <marker date="1532630589175" expanded="true" signature="2104:2188" ph="select * fro... user" />
+                <marker date="1532630589175" expanded="true" signature="2268:2322" ph="select is_ro... user" />
               </folding>
             </state>
           </provider>
@@ -244,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/controller/LoginControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/vo/MovieVO.java" />
@@ -262,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/Comment.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/CommentMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Mapper/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml" />
       </list>
     </option>
   </component>
@@ -710,7 +692,7 @@
       <workItem from="1532484875115" duration="11171000" />
       <workItem from="1532567417701" duration="21975000" />
       <workItem from="1532622978649" duration="587000" />
-      <workItem from="1532626135806" duration="1471000" />
+      <workItem from="1532626135806" duration="2661000" />
     </task>
     <task id="LOCAL-00001" summary="修改了controller和service">
       <created>1532487242115</created>
@@ -754,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532614805354</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修改了两个controller&#10;comment的entity加了tostring&#10;commentmapper的bug修复了">
+      <created>1532627732752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532627732752</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -790,7 +779,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37646000" />
+    <option name="totallyTimeSpent" value="38836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
@@ -815,7 +804,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46995708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24114774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24114774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -838,7 +827,8 @@
     <MESSAGE value="修改了controller和service" />
     <MESSAGE value="修改了mapper的路径和一大堆bug" />
     <MESSAGE value="又修改了一大堆的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="又修改了一大堆的bug" />
+    <MESSAGE value="修改了两个controller&#10;comment的entity加了tostring&#10;commentmapper的bug修复了" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了两个controller&#10;comment的entity加了tostring&#10;commentmapper的bug修复了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,6 +942,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-518">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1532630589175" expanded="true" signature="873:1084" ph="INSERT INTO USER... " />
+            <marker date="1532630589175" expanded="true" signature="1167:1200" ph="DELETE FROM USER... " />
+            <marker date="1532630589175" expanded="true" signature="1270:1528" ph="update USER... " />
+            <marker date="1532630589175" expanded="true" signature="1636:1671" ph="SELECT * FRO... USER" />
+            <marker date="1532630589175" expanded="true" signature="1744:1758" ph="select * fro... USER" />
+            <marker date="1532630589175" expanded="true" signature="1744:1762" ph="select * fro... user" />
+            <marker date="1532630589175" expanded="true" signature="1837:1900" ph="update user... " />
+            <marker date="1532630589175" expanded="true" signature="1980:2028" ph="select * fro... USER" />
+            <marker date="1532630589175" expanded="true" signature="2104:2188" ph="select * fro... user" />
+            <marker date="1532630589175" expanded="true" signature="2268:2322" ph="select is_ro... user" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,16 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="118" column="56" lean-forward="false" selection-start-line="118" selection-start-column="56" selection-end-line="118" selection-end-column="56" />
-          <folding>
-            <element signature="e#4350#4361#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -1075,13 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="122" column="44" lean-forward="false" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="60" column="53" lean-forward="false" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1149,14 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/ScoreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/service/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1178,35 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="69" column="68" lean-forward="false" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
-          <folding>
-            <element signature="e#8688#8689#0" expanded="false" />
-            <element signature="e#8737#8738#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/CollectionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1218,14 +1166,6 @@
             <marker date="1532505324224" expanded="true" signature="1153:1195" ph="SELECT * FRO... collection" />
             <marker date="1532505324224" expanded="true" signature="1320:1371" ph="select * fro... collection" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/MovieMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,6 +1264,75 @@
             <marker date="1532627652312" expanded="true" signature="1667:1708" ph="SELECT * FRO... comment" />
             <marker date="1532627652312" expanded="true" signature="1790:1839" ph="SELECT * FRO... comment" />
             <marker date="1532627652312" expanded="true" signature="1930:2003" ph="SELECT * FRO... comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qqdzz/tinybean/dao/MovieMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="69" column="68" lean-forward="false" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="118" column="56" lean-forward="false" selection-start-line="118" selection-start-column="56" selection-end-line="118" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qqdzz/tinybean/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1532630589175" expanded="true" signature="873:1084" ph="INSERT INTO USER... " />
+            <marker date="1532630589175" expanded="true" signature="1167:1200" ph="DELETE FROM USER... " />
+            <marker date="1532630589175" expanded="true" signature="1270:1528" ph="update USER... " />
+            <marker date="1532630589175" expanded="true" signature="1636:1671" ph="SELECT * FRO... USER" />
+            <marker date="1532630589175" expanded="true" signature="1744:1758" ph="select * fro... USER" />
+            <marker date="1532630589175" expanded="true" signature="1744:1762" ph="select * fro... user" />
+            <marker date="1532630589175" expanded="true" signature="1837:1900" ph="update user... " />
+            <marker date="1532630589175" expanded="true" signature="1980:2028" ph="select * fro... USER" />
+            <marker date="1532630589175" expanded="true" signature="2104:2188" ph="select * fro... user" />
+            <marker date="1532630589175" expanded="true" signature="2268:2322" ph="select is_ro... user" />
           </folding>
         </state>
       </provider>
