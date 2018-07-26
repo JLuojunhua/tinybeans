@@ -69,6 +69,7 @@ public class MovieMapperTest {
     @Test
     @Autowired
     public void findById() {
+        System.out.println(movieMapper.findById(2158490).toString());
 
     }
 
@@ -77,12 +78,12 @@ public class MovieMapperTest {
 //        List<Movie> movieList= movieMapper.findAll();
 //        Movie movie = movieList.get(0);
 //        System.out.println(movie.toString());
-        Movie movie = movieMapper.findById(1578714);
-        System.out.println(movie.toString());
+        System.out.println(movieController.getMovieById(1578714).toString());
     }
 
     @Test
     public void findByMovieName() {
+        System.out.println(movieMapper.findByMovieName("药神"));
     }
 
     @Test
@@ -102,7 +103,7 @@ public class MovieMapperTest {
     }
     @Test
     public void findByDate() {
-
+        System.out.println(movieMapper.findByDate("2017-06-02"));
     }
 
     @Test

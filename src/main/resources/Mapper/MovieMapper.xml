@@ -48,7 +48,7 @@
         update movie set
         comment_num = #{commentNum},
         director = #{director},
-        scriptwriter = #{scriptWriter},
+        scriptwriter = #{scriptwriter},
         mainactor = #{mainactor},
         produce_country = #{produceCountry},
         language = #{language},
@@ -75,23 +75,30 @@
     </select>
 
     <select id="findByMovieName" resultMap="MovieResult">
-        select * from movie where movie_name = #{movieName}
+        select * from movie where movie_name like concat('%', #{movieName}, '%')
     </select>
 
     <select id="findByDirector" resultMap="MovieResult">
-        select * from movie where director = #{director}
+        select * from movie where director like concat('%', #{director}, '%')
     </select>
 
     <select id="findByMainactor" resultMap="MovieResult">
-        select * from movie where director = #{director}
+        select * from movie where mainactor like concat('%', #{mainactor},'%')
     </select>
 
     <select id="findByClassification" resultMap="MovieResult">
         select * from movie where classification like concat('%',#{classification},'%')
     </select>
 
+    <!--int modifyScore(Integer movieId, Double score);-->
+    <update id="modifyScore">
+        update movie
+        set score = #{score}
+        where id = #{movieId}
+    </update>
+
     <select id="findByDate" resultMap="MovieResult">
-        select * from movie where date = #{date}
+        select * from movie where date like concat('%', #{date}, '%')
     </select>
     
     <select id="sortMovieByHot" resultMap="MovieResult">
