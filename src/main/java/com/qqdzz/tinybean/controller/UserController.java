@@ -8,6 +8,8 @@ import com.qqdzz.tinybean.vo.UserPhotoVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.PastOrPresent;
+
 /**
  * @author
  */
@@ -79,5 +81,20 @@ public class UserController {
     public JsonResult<User> getUserByName(String name) {
         User user = userService.findByUserName(name);
         return new JsonResult<User>(user);
+    }
+
+    @PostMapping("/modifyUser")
+    public JsonResult modifyUser(String userName, String sex, String telephone, String password, String userLikeCategories) {
+        User user = new User();
+        user.setUserName(userName);
+        user.setUserSex(sex);
+        user.setUserPhoneNum(telephone);
+        user.setUserPassword(password);
+        user.setUserLikeCategories(userLikeCategories);
+        if (userService.doModify(user)) {
+            return new JsonResult("修改信息成功");
+        } else {
+            return new JsonResult("修改信息失败");
+        }
     }
 }

@@ -9,6 +9,7 @@ import com.qqdzz.tinybean.service.MovieService;
 import com.qqdzz.tinybean.service.UserService;
 import com.qqdzz.tinybean.vo.CommentVO;
 import com.qqdzz.tinybean.vo.SearchUserVO;
+import com.qqdzz.tinybean.vo.UserInfoVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -152,7 +153,7 @@ public class AdminController {
     @GetMapping("/getAllUsers")
     public JsonResult<User> getAllUsers() {
         List<User> userList = userService.findAll();
-        return (JsonResult<User>) userList;
+        return new JsonResult<User>(userList);
     }
 
 }
