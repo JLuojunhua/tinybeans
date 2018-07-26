@@ -3,6 +3,7 @@ package com.qqdzz.tinybean.dao;
 import com.qqdzz.tinybean.entity.Movie;
 import com.qqdzz.tinybean.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public interface MovieMapper {
     Movie findByMovieName(String movieName);
     List<Movie> findByDirector(String director);
     List<Movie> findByMainactor(String mainactor);
-    List<Movie> findByClassification(String classification);
+    List<Movie> findByClassification(@Param("classification") String classification);
     List<Movie> findByDate(String date);
     List<Movie> sortMovieByHot();
     List<Movie> sortMovieByScore();

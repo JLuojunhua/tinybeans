@@ -88,4 +88,18 @@ public class User {
     public void setUserLikeCategories(String userLikeCategories) {
         this.userLikeCategories = userLikeCategories;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", isRoot=" + isRoot +
+                ", icon='" + icon + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userSex='" + userSex + '\'' +
+                ", userPhoneNum='" + userPhoneNum + '\'' +
+                ", userLikeCategories='" + userLikeCategories + '\'' +
+                '}';
+    }
 }

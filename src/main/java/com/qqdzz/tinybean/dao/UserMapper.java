@@ -2,6 +2,7 @@ package com.qqdzz.tinybean.dao;
 
 import com.qqdzz.tinybean.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,6 +17,6 @@ public interface UserMapper {
     List<User> findAll();
     int updatePhoto(Integer id, String icon);
     User findByUserName(String userName);
-    int isUser(String userName, String password);
+    User isUser(@Param("userName") String userName, @Param("userPassword") String userPassword);
     int isRoot(String userName);
 }

@@ -101,8 +101,21 @@ public class AdminController {
     }
 
     @DeleteMapping("/comment")
-    private JsonResult<CommentVO> deleteCommentByCommentId(Integer commentId){
+    public JsonResult<CommentVO> deleteCommentByCommentId(Integer commentId){
         commentService.doRemove(commentId);
         return this.getCommentByCondition(commentId.toString());
+    }
+
+    @GetMapping("/getbanned")
+    public JsonResult<CommentVO> getAllBannedComment() {
+        List<Comment> commentList = commentService.findBannedAll();
+        List<CommentVO> commentVOList = new ArrayList<CommentVO>();
+        for (Comment comment : commentList) {
+            if (comment != null) {
+                User user = userService.findById(comment.getUserId());
+                commentVOList.add(new CommentVO(user.getId(), user.getIcon(), user.getUserName(),comment.getUserId(), comment.getComment())) ;
+            }
+        }
+        return new JsonResult<CommentVO>(commentVOList);
     }
 }

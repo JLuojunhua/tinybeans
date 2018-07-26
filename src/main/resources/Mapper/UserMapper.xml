@@ -6,8 +6,9 @@
     <!--映射-->
     <resultMap type="com.qqdzz.tinybean.entity.User" id="UserResult">
         <id column = "id" property = "id"/>
+        <result column = "user_name" property = "userName"/>
         <result column = "is_root" property = "isRoot"/>
-        <result column = "icon" property = "icon"/>
+        <result column = "icon" property="icon"/>
         <result column = "user_password" property = "userPassword"/>
         <result column = "user_sex" property = "userSex"/>
         <result column = "user_phone_num" property = "userPhoneNum"/>
@@ -16,16 +17,16 @@
 
     <!--接口实现-->
     <insert id="add" parameterType="User">
-        INSERT INTO USER (is_root,icon,user_password,user_sex,user_phone_num,user_like_categories)
+        INSERT INTO user (is_root,icon,user_password,user_sex,user_phone_num,user_like_categories)
         value (#{isRoot},#{icon},#{userPassword},#{userSex},#{userPhoneNum},#{userLikeCategories})
     </insert>
 
     <delete id="delete" parameterType="java.lang.Integer">
-        DELETE FROM USER WHERE id = #{id}
+        DELETE FROM user WHERE id = #{id}
     </delete>
 
     <update id="update" parameterType="User">
-        update USER set
+        update user set
         is_root = #{isRoot},
         icon = #{icon},
         user_password = #{userPassword},
@@ -35,12 +36,12 @@
         where id = #{id}
     </update>
 
-    <select id="findById" parameterType="java.lang.Integer" resultType="User">
-        SELECT * FROM USER where id = #{id}
+    <select id="findById" parameterType="java.lang.Integer" resultMap="UserResult">
+        SELECT * FROM user where id = #{id}
     </select>
 
     <select id="findAll" resultMap="UserResult">
-        select * from USER
+        select * from user
     </select>
 
     <update id="updatePhoto" parameterType="User">
@@ -50,14 +51,14 @@
     </update>
 
     <select id="findByUserName" resultMap="UserResult">
-        select * from USER where user_name = #{userName}
+        select * from user where user_name = #{userName}
     </select>
     
-    <select id="isUser" parameterType="java.lang.String">
-        select * from user where user_name = #{userName} and password = #{password}
+    <select id="isUser" resultMap="UserResult">
+        select * from user where user_name = #{userName} and user_password = #{userPassword}
     </select>
 
-    <select id="isRoot" parameterType="java.lang.String">
+    <select id="isRoot" resultType="java.lang.Integer">
         select is_root from user where user_name = #{userName}
     </select>
 </mapper>

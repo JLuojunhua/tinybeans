@@ -29,13 +29,13 @@
     <!--接口实现-->
     <insert id="add" parameterType="Movie">
         insert into movie
-        (id,commentNum,director,scriptwriter,
-        mainactor,produceCountry,language,date,year,movieDuration,
-        score,scorePopulation,icon,oneStar,
-        twoStar,threeStar,fourStar,fiveStar)
+        (id,comment_num,director,scriptwriter,
+        mainactor,produce_country,language,date,year,movie_duration,
+        score,scored_population,icon,one_star,
+        two_star,three_star,four_star,five_star)
         value (#{id}, #{commentNum}, #{director}, #{scriptwriter},
         #{mainactor}, #{produceCountry}, #{language}, #{date},
-        #{year}, #{movieDuration},#{score}, #{scorePopulation},
+        #{year}, #{movieDuration},#{score}, #{scoredPopulation},
         #{icon}, #{oneStar}, #{twoStar}, #{threeStar},
         #{fourStar}, #{fiveStar})
     </insert>
@@ -46,27 +46,27 @@
 
     <update id="update" parameterType="Score">
         update movie set
-        commentNum = #{commentNum},
+        comment_num = #{commentNum},
         director = #{director},
         scriptwriter = #{scriptWriter},
         mainactor = #{mainactor},
-        produceCountry = #{produceCountry},
+        produce_country = #{produceCountry},
         language = #{language},
         date = #{date},
         year = #{date},
-        movieDuration = #{movieDuration},
+        movie_duration = #{movieDuration},
         score = #{score},
-        scorePopulation = #{scorePopulation},
+        scored_population = #{scoredPopulation},
         icon = #{icon},
-        oneStar = #{oneStar},
-        twoStar = #{twoStar},
-        threeStar = #{threeStar},
-        fourStar = #{fourStar},
-        fiveStar = #{fiveStar}
+        one_star = #{oneStar},
+        two_star = #{twoStar},
+        three_star = #{threeStar},
+        four_star = #{fourStar},
+        five_star = #{fiveStar}
         where id = #{id};
     </update>
 
-    <select id="findById" parameterType="java.lang.Integer" resultType="Movie">
+    <select id="findById" parameterType="java.lang.Integer" resultMap="MovieResult">
         SELECT * FROM movie where id = #{id}
     </select>
 
@@ -87,7 +87,7 @@
     </select>
 
     <select id="findByClassification" resultMap="MovieResult">
-        select * from movie where classification like '%#{classification}%'
+        select * from movie where classification like concat('%',#{classification},'%')
     </select>
 
     <select id="findByDate" resultMap="MovieResult">
@@ -99,11 +99,10 @@
     </select>
 
     <select id="sortMovieByScore" resultMap="MovieResult">
-        select * FROM movie ORDER BY
-        select score in score where movie_id = #{movieId} DESC
+        select * from movie order by score desc
     </select>
 
     <select id="sortMovieByTime" resultMap="MovieResult">
-        select * FROM movie ORDER BY year DESC
+        select * FROM movie ORDER BY date DESC
     </select>
 </mapper>

@@ -19,7 +19,7 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping("/login")
-    public JsonResult<Integer> login(@RequestParam(required = true)String userName, @RequestParam(required = true)String password, HttpServletRequest request) {
+    public JsonResult<Integer> login(@RequestParam(required = true)String userName, @RequestParam(required = true)String password) {
         return userService.login(userName, password);
     }
 

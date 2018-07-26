@@ -65,8 +65,8 @@ public class UserService {
      * @return
      */
     public JsonResult<Integer> login(String userName, String password) {
-        int isUser = userMapper.isUser(userName, password);
-        if (isUser > 0) {
+        User User = userMapper.isUser(userName, password);
+        if (User != null) {
             int root = userMapper.isRoot(userName);
             if (root == 0) {
                 return new JsonResult<Integer>(1);
