@@ -74,4 +74,10 @@ public class UserController {
             return false;
         }
     }
+
+    @GetMapping("/getuserbyname")
+    public JsonResult<User> getUserByName(String name) {
+        User user = userService.findByUserName(name);
+        return new JsonResult<User>(user);
+    }
 }
