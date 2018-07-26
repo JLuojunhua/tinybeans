@@ -149,4 +149,10 @@ public class AdminController {
         }
     }
 
+    @GetMapping("/getAllUsers")
+    public JsonResult<User> getAllUsers() {
+        List<User> userList = userService.findAll();
+        return (JsonResult<User>) userList;
+    }
+
 }
