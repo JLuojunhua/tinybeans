@@ -16,7 +16,7 @@ public class ScoreMapperTest {
     @Test
     public void getScore()
     {
-        System.out.println(scoreMapper.getScore(1,2158490));
+        System.out.println(scoreMapper.getScore(9,3578939));
     }
 
     @Test

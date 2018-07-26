@@ -33,6 +33,33 @@ public class CommentController {
         List<MovieCommentVO> movieCommentVOList = new ArrayList<MovieCommentVO>();
         int timeA = 10*time;
         int timeB = 10*time+9;
+        timeB = (timeB > commentList.size()-1)? commentList.size()-1 : timeB;
+        for (int i = timeA; i<= timeB; i++) {
+            Comment comment = commentList.get(i);
+            if (comment != null) {
+                User user = userService.findById(comment.getUserId());
+                MovieCommentVO movieCommentVO = new MovieCommentVO(user.getUserName(), comment.getComment(), comment.getIsBanned());
+                movieCommentVOList.add(movieCommentVO);
+            } else {
+                break;
+            }
+        }
+        return new JsonResult<MovieCommentVO>(movieCommentVOList);
+    }
+
+    /**
+     *
+     * @param movieId
+     * @param time
+     * @return
+     */
+    @GetMapping("/getCommentByMovieId")
+    public JsonResult<MovieCommentVO> getCommentByMovieId(Integer movieId, int time) {
+        List<Comment> commentList = commentService.findByMovieId(movieId);
+        List<MovieCommentVO> movieCommentVOList = new ArrayList<MovieCommentVO>();
+        int timeA = 10*time;
+        int timeB = 10*time+9;
+        timeB = (timeB > commentList.size()-1)? commentList.size()-1 : timeB;
         for (int i = timeA; i<= timeB; i++) {
             Comment comment = commentList.get(i);
             if (comment != null) {
