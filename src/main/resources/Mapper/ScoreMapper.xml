@@ -14,7 +14,7 @@
     <!--接口实现-->
     <insert id="add" parameterType="Score">
         insert into score (id,movie_id,user_id,score)
-        value (#{id}, #{movieId}, #{user_id}, #{score})
+        value (#{id}, #{movieId}, #{userId}, #{score})
     </insert>
 
     <delete id="delete" parameterType="java.lang.Integer">

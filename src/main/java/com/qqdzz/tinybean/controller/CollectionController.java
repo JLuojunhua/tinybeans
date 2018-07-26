@@ -8,6 +8,7 @@ import com.qqdzz.tinybean.service.MovieService;
 import com.qqdzz.tinybean.vo.MovieCollectionVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,18 @@ public class CollectionController {
     private CollectionService collectionService;
     @Autowired
     private MovieService movieService;
+
+    @PostMapping("/addcollection")
+    public JsonResult addCollection(Integer userId, Integer movieId) {
+        Collection1 collection = new Collection1();
+        collection.setUserId(userId);
+        collection.setMovieId(movieId);
+        if (collectionService.doAdd(collection)) {
+            return new JsonResult("添加收藏成功");
+        } else {
+            return new JsonResult("添加收藏失败");
+        }
+    }
 
     /**
      * 获取当前用户的八部收藏电影

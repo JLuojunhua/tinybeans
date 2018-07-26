@@ -47,7 +47,12 @@ public class CommentController {
     }
 
     @PostMapping("/comment")
-    public JsonResult submitComment(@RequestBody Comment comment) {
+    public JsonResult submitComment(Integer userId, Integer movieId, String commentText) {
+        Comment comment = new Comment();
+        comment.setUserId(userId);
+        comment.setIsBanned(0);
+        comment.setMovieId(movieId);
+        comment.setComment(commentText);
         if (commentService.doAdd(comment)) {
             return new JsonResult("提交影评成功");
         } else {

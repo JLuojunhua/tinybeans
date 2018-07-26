@@ -58,4 +58,15 @@ public class CommentVO {
     public void setCommentText(String commentText) {
         this.commentText = commentText;
     }
+
+    @Override
+    public String toString() {
+        return "CommentVO{" +
+                "userId=" + userId +
+                ", userPhoto='" + userPhoto + '\'' +
+                ", userName='" + userName + '\'' +
+                ", commentId=" + commentId +
+                ", commentText='" + commentText + '\'' +
+                '}';
+    }
 }

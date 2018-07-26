@@ -2,6 +2,7 @@ package com.qqdzz.tinybean.dao;
 
 import com.qqdzz.tinybean.entity.Comment;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,5 +18,5 @@ public interface CommentMapper {
     List<Comment> findByCommentText(String commentText);
     List<Comment> findBannedAll();
     List<Comment> findByMovieId(Integer movieId);
-    List<Comment> findByMovieIdAndUserId(Integer movieId, Integer userId);
+    List<Comment> findByMovieIdAndUserId(@Param("movieId") Integer movieId, @Param("userId") Integer userId);
 }

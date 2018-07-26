@@ -12,27 +12,27 @@
 
     <!--接口实现-->
     <insert id="add" parameterType="com.qqdzz.tinybean.entity.Collection1">
-        insert into collection1 (id,movie_id,user_id)
+        insert into collection (id,movie_id,user_id)
         value (#{id}, #{movieId}, #{userId})
     </insert>
 
     <delete id="delete" parameterType="java.lang.Integer">
-        DELETE FROM collection1 WHERE id = #{id}
+        DELETE FROM collection WHERE id = #{id}
     </delete>
 
     <update id="update" parameterType="com.qqdzz.tinybean.entity.Collection1">
-        update collection1 set
+        update collection set
         movie_id = #{movie_id},
         user_id = #{userId}
         where id = #{id};
     </update>
 
     <select id="findById" parameterType="java.lang.Integer" resultType="com.qqdzz.tinybean.entity.Collection1">
-        SELECT * FROM collection1 where id = #{id}
+        SELECT * FROM collection where id = #{id}
     </select>
 
     <!--<Collection1> findByUserId();-->
     <select id="findByUserId" resultMap="CollectionResult">
-        select * from collection1 where user_id = #{userId}
+        select * from collection where user_id = #{userId}
     </select>
 </mapper>

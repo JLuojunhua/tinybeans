@@ -33,9 +33,11 @@ public class CommentMapperTest {
 
     @Test
     public void findByMovieId() {
+        System.out.println(commentMapper.findByMovieId(1).toString());
     }
 
     @Test
     public void findByMovieIdAndUserId() {
+        System.out.println(commentMapper.findByMovieIdAndUserId(100, 1).toString());
     }
 }

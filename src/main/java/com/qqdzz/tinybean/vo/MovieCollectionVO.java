@@ -47,4 +47,14 @@ public class MovieCollectionVO {
     public void setPoster(String poster) {
         this.poster = poster;
     }
+
+    @Override
+    public String toString() {
+        return "MovieCollectionVO{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", score=" + score +
+                ", poster='" + poster + '\'' +
+                '}';
+    }
 }
